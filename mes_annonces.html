@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="icon" href="./medias/favicon.png" type="image/png">
+        <title>Ubisoft Location - Mes annonces</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/mes-annonces.css">
+    </head>
+    <body>
+        <header>
+            <menu>
+                <a href="./index.html"><img alt="logo ubisoft" src="./medias/logo.png"></a>
+                <nav>
+                    <li><button onclick="window.location.href = './index.html'">Accueil</button></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="annonces">Annonces</button>
+                            <div class="dropItems">
+                                <a href="./annonces_courte.html">Location courte durée</a>
+                                <a href="./annonces_longue.html">Location longue durée</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><button onclick="window.location.href = './nouvelle_annonce.html'">Nouvelle Annonce</button></li>
+                    <li><button id="actualPage" onclick="window.location.href = './mes_annonces.html'">Mes annonces</button></li>
+                </nav>
+            </menu>
+        </header>
+        <main>
+            <div class="corpsPageAnnonce">
+                <h1>Vos annonces</h1>
+                <section id="annonces">
+                    <div class="annonceEnLigne">
+                        <img src="./medias/logo.png">
+                        <p><b>Vélo</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description :  vélo électrique acheté en 2021, très bon état, chargeur fourni</p>
+                        <p>Etat de l'annonce : </p>
+                        <p class="enLigne">En ligne</p>
+                        <a href="./modifier.html">Modifier</a>
+                        <a href="./supprime.html">Supprimer</a><br>
+                    </div>
+                    <div class="annonceEnAttente">
+                        <img src="./medias/logo.png">
+                        <p><b>Vélo</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description :  vélo électrique acheté en 2021, très bon état, chargeur fourni</p>
+                        <p>Etat de l'annonce : </p>
+                        <p class="enAttente">En Attente</p>
+                        <a href="./modifier.html">Modifier</a>
+                        <a href="./supprime.html">Annuler l'envoi</a><br>
+                    </div>
+                    <div class="annonceSupprimee">
+                        <img src="./medias/logo.png">
+                        <p><b>Vélo</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description :  vélo électrique acheté en 2021, très bon état, chargeur fourni</p>
+                        <p>Etat de l'annonce : </p>
+                        <p class="supprime">Supprimée</p>
+                        <a href="./modifier.html">Modifier</a>
+                        <a href="./supprime.html">Supprimer</a><br>
+                    </div>
+                    <div class="annonceSupprimee">
+                        <img src="./medias/logo.png">
+                        <p><b>Vélo</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description :  vélo électrique acheté en 2021, très bon état, chargeur fourni</p>
+                        <p>Etat de l'annonce : </p>
+                        <p class="supprime">Refusée par un administrateur</p>
+                        <a href="./modifier.html">Modifier</a>
+                        <a href="./supprime.html">Supprimer</a><br>
+                    </div>
+                </section>
+                <h2>Une erreur ? Une question ?</h2>
+                <a href="mailto:florian.gavoille.etu@univ-lille.fr">Nous contacter</a>
+            </div>
+        </main>
+        <footer>
+            <p id="rights">2001- 2024 Ubisoft Entertainment. All Rights Reserved. Ubisoft, Ubi.com and the Ubisoft logo are trademarks of Ubisoft Entertainment in the U.S and/or other countries.</p>
+        </footer>
+    </body>
+</html>

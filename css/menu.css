@@ -1,0 +1,103 @@
+menu>nav>li {
+    display: inline-flex;
+    vertical-align: top;
+    flex-wrap: wrap;
+}
+
+header button {
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    border-color: black;
+    border-style: double;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0s;
+}
+
+header button#actualPage, header button:hover {
+    text-underline-offset: 15px;
+    text-decoration: underline;
+    text-decoration-thickness: 7px;
+    font-weight: bold;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 90px;
+    z-index: 2;
+}
+
+.dropItems {
+    display: none;
+}
+
+.dropdown>:hover+.dropItems, .dropItems:hover{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.dropItems {
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.dropItems>a {
+    text-decoration: none;
+    color: black;
+    padding: 7px;
+    padding-left: 11px;
+    width: 200px;
+}
+
+.dropItems>a:hover, .dropItems>a#actualPage {
+    font-weight: bold;
+    border-left: 7px;
+    padding-left: 4px;
+    border-color: black;
+    border-left-style: solid;
+}
+
+menu>nav {
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+}
+
+menu img {
+    width: 120px;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+@media (max-width: 500px) {
+    header {
+        height: 200px;
+    }
+    main {
+        padding-top: 250px;
+    }
+}
+
+body>footer {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+footer>#rights {
+    font-size: 10px;
+}

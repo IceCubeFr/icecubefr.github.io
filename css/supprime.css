@@ -1,0 +1,21 @@
+main {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../medias/rayman_triste.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    padding-top: 340px;
+    padding-bottom: 400px;
+    color: white;
+    text-shadow: 0 0 20px black;
+}
+
+main a {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-weight: bolder;
+    text-decoration: none;
+}

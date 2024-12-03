@@ -1,0 +1,98 @@
+form label>input, form label>select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+main{
+    margin: 0;
+    display: flexbox;
+    justify-content: center;
+    background-image: url('../medias/thecrew.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+main>form>fieldset {
+    border-style: none;
+    background-color: rgba(240,248,255,0.93);;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 20px black;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+input[type="text"], input[type="email"], input[type="phone"] {
+    border-style: none;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 15px;
+    box-shadow: 0 0 5px;
+}
+
+input[type="radio"]:focus {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 5px double white;
+    background-color: #d80388;
+    transition: 0.2s all linear;
+}
+
+label.radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+select {
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    border-style: none;
+    box-shadow: 0 0 5px;
+}
+
+textarea {
+    border-style: none;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    box-shadow: 0 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    width: 50%;
+}
+
+button {
+    border-radius: 20px;
+    background-color: #d80388;
+    color: white;
+    border-color: #d80388;
+    border-style: double;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.3s;
+}
+
+button[type]:hover {
+    background-color:transparent;
+    border-color: #d80388;
+    color: #d80388;
+}
+
+.boutons {
+    display: flex;
+    justify-content: space-evenly;
+}

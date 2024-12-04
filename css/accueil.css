@@ -26,6 +26,7 @@ main>section#titre>p:hover, main>section#titre>h1:hover {
 main>section#titre>a {
     width: 50px;
     height: 50px;
+    rotate: 90;
 }
 
 section#items {

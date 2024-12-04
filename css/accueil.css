@@ -23,7 +23,7 @@ main>section#titre>p:hover, main>section#titre>h1:hover {
     text-shadow: 0 0 50px #d80388;
 }
 
-main>section#titre>img {
+main>section#titre>a>img {
     width: 50px;
     height: 50px;
     rotate: 90;

@@ -4,8 +4,8 @@ main {
 }
 
 main>section#titre {
-    padding-top: 500px;
-    padding-bottom: 25%;
+    padding-top: 400px;
+    padding-bottom: 400px;
     background-image: url('../medias/shadows.jpg');
     background-size: cover;
     background-position: center;
@@ -21,6 +21,11 @@ main>section#titre>p, main>section#titre>h1 {
 
 main>section#titre>p:hover, main>section#titre>h1:hover {
     text-shadow: 0 0 50px #d80388;
+}
+
+#titre>img {
+    width: 50px;
+    height: 50px;
 }
 
 section#items {

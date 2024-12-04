@@ -4,6 +4,8 @@ main {
 }
 
 main>section#titre {
+    display: flex;
+    justify-content: center;
     padding-top: 400px;
     padding-bottom: 400px;
     background-image: url('../medias/shadows.jpg');
@@ -27,7 +29,6 @@ main>section#titre>a>img {
     width: 50px;
     height: 50px;
     rotate: 90deg;
-    justify-self: center;
     filter: invert(1);
 }
 

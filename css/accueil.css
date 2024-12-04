@@ -6,6 +6,7 @@ main {
 main>section#titre {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding-top: 400px;
     padding-bottom: 400px;
     background-image: url('../medias/shadows.jpg');

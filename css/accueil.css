@@ -4,7 +4,7 @@ main {
 }
 
 main>section#titre {
-    padding-top: 25%;
+    padding-top: 500px;
     padding-bottom: 25%;
     background-image: url('../medias/shadows.jpg');
     background-size: cover;

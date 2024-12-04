@@ -60,7 +60,10 @@ p {
 }
 
 #annonces>*>:nth-child(5) {
-    height: 5rem;
+    height: 4.6rem;
+    max-height: 4.6rem;
+    margin-bottom: 20px;
+    overflow:hidden;
 }
 
 .corpsPageAnnonce {

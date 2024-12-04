@@ -40,9 +40,7 @@ article {
 }
 
 article:hover {
-    width: 36%;
     box-shadow: 0 0 20px #d80388;
-    font-size: 15.5px;
 }
 
 @media (max-width: 500px) {

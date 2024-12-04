@@ -33,6 +33,11 @@ main>section#titre>a>img {
     filter: invert(1);
 }
 
+main>section#titre>a {
+    justify-content: center;
+    justify-items: center;
+}
+
 section#items {
     display: flex;
     flex-wrap: wrap;

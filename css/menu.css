@@ -80,7 +80,7 @@ menu img {
     margin-right: 30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
     header {
         height: 200px;
     }

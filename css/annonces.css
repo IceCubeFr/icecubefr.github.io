@@ -162,7 +162,7 @@ form label>input, form label>select {
     margin-top: 10px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
     .filtres {
         position: absolute;
         top: 260px;

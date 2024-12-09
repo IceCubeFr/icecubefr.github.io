@@ -4,11 +4,8 @@ main {
 }
 
 main>section#titre {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 400px;
-    padding-bottom: 400px;
+    padding-top: 500px;
+    padding-bottom: 25%;
     background-image: url('../medias/shadows.jpg');
     background-size: cover;
     background-position: center;
@@ -24,18 +21,6 @@ main>section#titre>p, main>section#titre>h1 {
 
 main>section#titre>p:hover, main>section#titre>h1:hover {
     text-shadow: 0 0 50px #d80388;
-}
-
-main>section#titre>a>img {
-    width: 50px;
-    height: 50px;
-    rotate: 90deg;
-    filter: invert(1);
-}
-
-main>section#titre>a {
-    justify-content: center;
-    justify-items: center;
 }
 
 section#items {

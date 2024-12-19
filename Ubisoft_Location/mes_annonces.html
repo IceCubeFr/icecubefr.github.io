@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="icon" href="./medias/favicon.png" type="image/png">
+        <title>Ubisoft Location - Mes annonces</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/mes-annonces.css">
+    </head>
+    <body>
+        <header>
+            <menu>
+                <a href="./index.html"><img alt="logo ubisoft" src="./medias/logo.png"></a>
+                <nav>
+                    <li><button onclick="window.location.href = './index.html'">Accueil</button></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="annonces">Annonces</button>
+                            <div class="dropItems">
+                                <a href="./annonces_courte.html">Location courte durée</a>
+                                <a href="./annonces_longue.html">Location longue durée</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><button onclick="window.location.href = './nouvelle_annonce.html'">Nouvelle Annonce</button></li>
+                    <li><button id="actualPage" onclick="window.location.href = './mes_annonces.html'">Mes annonces</button></li>
+                </nav>
+            </menu>
+        </header>
+        <main>
+            <div class="corpsPageAnnonce">
+                <h1>Vos annonces</h1>
+                <section id="annonces">
+                    <div class="annonceEnLigne">
+                        <img src="./medias/imgVehicules/vélo_4.jpg">
+                        <p><b>Vélo</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description : vélo jaune en excellent état. Les pneus à regonfler légérement, mais tout le matériel (casque, pompe, lampe,...) peuvent être empruntées</p>
+                        <p>Etat de l'annonce : </p>
+                        <p class="enLigne">En ligne</p>
+                        <a href="./modifier.html">Modifier</a>
+                        <a href="./supprime.html">Supprimer</a><br>
+                    </div>
+                    <div class="annonceEnAttente">
+                        <img src="./medias/imgVehicules/trotinette_electrique_5.jpg">
+                        <p><b>Trotinette électrique</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description :  Trotinette électrique en très bon état. Chargeur et casque inclus</p>
+                        <p>Etat de l'annonce : </p>
+                        <p class="enAttente">En Attente</p>
+                        <a href="./modifier.html">Modifier</a>
+                        <a href="./supprime.html">Annuler l'envoi</a><br>
+                    </div>
+                    <div class="annonceSupprimee">
+                        <img src="./medias/imgVehicules/trotinette_electrique_9.jpg">
+                        <p><b>Trotinette électrique</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description :  Trotinette électrique acheté en 2023. Chargeur et casque inclus</p>
+                        <p>Etat de l'annonce : </p>
+                        <p class="supprime">Loué</p>
+                        <a href="./modifier.html">Modifier</a>
+                        <a href="./supprime.html">Supprimer</a><br>
+                    </div>
+                    <div class="annonceSupprimee">
+                        <img src="./medias/imgVehicules/vélo_1.jpg">
+                        <p><b>Vélo</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description :  vélo un petit peu abîmé. La roue de devant est à remplacer. Casque inclus</p>
+                        <p>Etat de l'annonce : </p>
+                        <p class="supprime">Refusée par un administrateur</p>
+                        <a href="./modifier.html">Modifier</a>
+                        <a href="./supprime.html">Supprimer</a><br>
+                    </div>
+                </section>
+                <h2>Une erreur ? Une question ?</h2>
+                <a href="mailto:florian.gavoille.etu@univ-lille.fr">Nous contacter</a>
+            </div>
+        </main>
+        <footer>
+            <p id="rights">2024 - Université de Lille - Tous droits réservés</p>
+            <p id="mentions"><a href="./mentions légales.html">Mentions Legales</a></p>
+        </footer>
+    </body>
+</html>

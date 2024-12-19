@@ -1,0 +1,77 @@
+main {
+    margin:0;
+    padding: 0;
+}
+
+main>section#titre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 500px;
+    padding-bottom: 500px;
+    background-image: url('../medias/shadows.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+}
+
+main>section#titre>p, main>section#titre>h1 {
+    text-shadow: 0 0 30px black;
+    color: white;
+    transition: 1s;
+}
+
+main>section#titre>p:hover, main>section#titre>h1:hover {
+    text-shadow: 0 0 50px #d80388;
+}
+
+section#items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+section#items:target {
+    padding-top: 200px;
+}
+
+article {
+    width: 500px;
+    box-shadow: 0 0 10px black;
+    margin: 30px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+article:hover {
+    box-shadow: 0 0 20px #d80388;
+}
+
+@media (max-width: 500px) {
+    article {
+        width: 50%;
+    }
+    article:hover {
+        width: 51%;
+        font-size: 15.3px;
+    }
+    main {
+        padding-top: 150px;
+    }
+}
+
+main a {
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    transition: 1s;
+    font-size: medium;
+}
+
+main a:hover {
+    font-weight: bold;
+    text-shadow: 0 0 20px #FFF;
+}

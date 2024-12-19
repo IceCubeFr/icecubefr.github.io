@@ -1,0 +1,122 @@
+#annonces {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main {
+    /*Image bg avec margin 0 et padding left right*/
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-image: url('../medias/odyssey.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    background-color:#d80388;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border-color: #d80388;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+main a:hover {
+    color: #d80388;
+    background-color: transparent;
+}
+
+p {
+    margin: 5px;
+}
+
+#annonces>*>:nth-child(7) {
+    height: 2.5rem;
+}
+
+#annonces>*>:nth-child(4) {
+    height: 2.5rem;
+    align-content: center;
+}
+
+#annonces>*>:nth-child(3) {
+    height: 1.25rem;
+}
+
+#annonces>*>:nth-child(5) {
+    height: 4.6rem;
+    max-height: 4.6rem;
+    margin-bottom: 20px;
+    overflow:hidden;
+}
+
+.corpsPageAnnonce {
+    background-color: rgba(240,248,255,0.93);
+    border-radius: 20px;
+    padding: 20px;
+}           
+
+.annonceEnLigne, .annonceEnAttente, .annonceSupprimee {
+    border-style:solid;
+    border-radius: 10px;
+    margin-bottom: 10px ;
+    width: 177px;
+    padding: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.annonceEnLigne {
+    border-color: darkseagreen;
+}
+
+.enLigne {
+    color: darkseagreen;
+    font-weight: bolder;
+}
+
+.annonceEnAttente {
+    border-color: darkorange;
+}
+
+.enAttente {
+    color: darkorange;
+    font-weight: bolder;
+}
+
+.annonceSupprimee {
+    border-color: red;
+}
+
+.supprime {
+    color: red;
+    font-weight: bolder;
+}
+
+#annonces img {
+    width: 170px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#titreAnnonces {
+    padding-top: 50px;
+    height: 60px;
+    color: #d80388;
+}

@@ -1,0 +1,175 @@
+fieldset#filtre {
+    display: none;
+    width: 250px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.filtres {
+    position: absolute;
+    top: 130px;
+    left: 10%;
+}
+
+.bouttonFiltre>img {
+    width: 10px;
+    rotate: 90deg;
+    filter: invert(1);
+    margin-left: 10px;
+    transition: 1s;
+}
+
+.filtres:hover img {
+    rotate: -90deg;
+}
+
+.filtres:hover>fieldset#filtre {
+    display: block;
+}
+
+#annonces {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main {
+    /*Image bg avec margin 0 et padding left right*/
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10vh;
+    background-image: url('../medias/rayman.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.corpsPageAnnonce {
+    background-color: rgba(240,248,255,0.93);
+    border-radius: 20px;
+    padding: 20px;
+}           
+
+.annonce {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: start;
+    border-style:solid;
+    border-color:darkslategrey;
+    border-radius: 10px;
+    margin-bottom: 10px ;
+    width: 177px;
+    padding: 20px;  
+    margin-left: 10px;
+}
+
+.annonce>:first-child {
+    height: 2rem;
+    align-content: center;
+}
+
+.annonce>:nth-child(4) {
+    height: 2.5rem;
+    align-content: center;
+}
+
+.annonce>:nth-child(5) {
+    height: 1.25rem;
+}
+
+.annonce>:nth-child(6) {
+    height: 7rem;
+    max-height: 7rem;
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+.annonce img {
+    width: 170px;
+    height: 120px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+select {
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    border-style: none;
+    box-shadow: 0 0 5px;
+}
+
+main a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    color: white;
+    background-color:#d80388;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border-color: #d80388;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+main a:hover {select {
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    border-style: none;
+    box-shadow: 0 0 5px;
+}
+    color: #d80388;
+    background-color: transparent;
+}
+
+#titreAnnonces {
+    padding-top: 50px;
+    height: 60px;
+    color: #d80388;
+}
+
+button {
+    border-radius: 20px;
+    background-color: #d80388;
+    color: white;
+    border-color: #d80388;
+    border-style: double;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.3s;
+}
+
+form label>input, form label>select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    .filtres {
+        position: absolute;
+        top: 260px;
+        left: 40%;
+    }
+    fieldset#filtre {
+        position: absolute;
+        left: -100%;
+    }
+}

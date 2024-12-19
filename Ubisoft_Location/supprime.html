@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="icon" href="./medias/favicon.png" type="image/png">
+        <title>Ubisoft Location - Mes annonces</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/supprime.css">
+    </head>
+    <body>
+        <header>
+            <menu>
+                <a href="./index.html"><img alt="logo ubisoft" src="./medias/logo.png"></a>
+                <nav>
+                    <li><button onclick="window.location.href = './index.html'">Accueil</button></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="annonces">Annonces</button>
+                            <div class="dropItems">
+                                <a href="./annonces_courte.html">Location courte durée</a>
+                                <a href="./annonces_longue.html">Location longue durée</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><button onclick="window.location.href = './nouvelle_annonce.html'">Nouvelle Annonce</button></li>
+                    <li><button onclick="window.location.href = './mes_annonces.html'">Mes annonces</button></li>
+                </nav>
+            </menu>
+        </header>
+        <main>
+            <h1>Votre annonce a bien été supprimée</h1>
+            <p>Elle reste sauvegardée dans notre base de données pendant 30 jours durant lesquels vous pouvez demander l'annulation de la suppression.</p>
+            <a href="./mes_annonces.html">Retour à mes annonces</a>
+            
+        </main>
+        <footer>
+            <p id="rights">2024 - Université de Lille - Tous droits réservés</p>
+            <p id="mentions"><a href="./mentions légales.html">Mentions Legales</a></p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+:root {
+    --primary: #5AED94;
+    --secondary: aliceblue;
+    --bgcolor: #4F4F4F;
+}
+
+body {
+    background-color: var(--bgcolor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: var(--primary);
+}
+
+p {
+    color: var(--secondary);
+}

@@ -1,7 +1,7 @@
 :root {
-    --primary: #5AED94;
+    --primary: #5aeded;
     --secondary: aliceblue;
-    --bgcolor: #4F4F4F;
+    --bgcolor: #1d1d1d;
 }
 
 body {
@@ -11,6 +11,7 @@ body {
 
 h1 {
     color: var(--primary);
+    text-shadow: 0 0 20px var(--primary);
 }
 
 p {

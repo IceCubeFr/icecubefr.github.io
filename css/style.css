@@ -1,7 +1,11 @@
 :root {
-    --primary: #5aeded;
-    --secondary: aliceblue;
-    --bgcolor: #1d1d1d;
+    --primary: #00FFFF;
+    --survol: #33FFFF;
+    --text-principal: #E0E0E0;
+    --text-secondaire: #A0A0A0;
+    --accents: #9B00FF;
+    --liens: #00FF9C;
+    --bgcolor: #121212;
 }
 
 body {
@@ -9,11 +13,56 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+h1, h2, main a {
     color: var(--primary);
     text-shadow: 0 0 20px var(--primary);
+    transition: 0.3s;
+}
+
+a:hover, #actualPage {
+    color: var(--liens);
+    text-shadow: 0 0 20px var(--liens);
+}
+
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+nav a {
+    margin-right: 50px;
+    text-decoration: none;
+    color: var(--text-principal);
+    transition: 0.3s;
+}
+
+nav li:hover p {
+    display: block;
+    width: 200px;
+    background-color: var(--bgcolor);
+    border-radius: 30px;
+    border-color: var(--accents);
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+    opacity: 1;
+}
+
+nav li p {
+    display: none;
+    position: absolute;
+    transition: opacity 0.3s ease;
+    opacity: 0;
 }
 
 p {
-    color: var(--secondary);
+    color: var(--text-principal);
 }

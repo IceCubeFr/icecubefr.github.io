@@ -19,7 +19,7 @@ h1, h2, main a {
     transition: 0.3s;
 }
 
-a:hover, #actualPage {
+a:hover, #actualPage, nav li:hover>a {
     color: var(--liens);
     text-shadow: 0 0 20px var(--liens);
 }
@@ -27,18 +27,26 @@ a:hover, #actualPage {
 main {
     margin-left: 10%;
     margin-right: 10%;
-    text-align: justify;
+    text-align: center;
+}
+
+.separator {
+    background-color: var(--accents);
+    height: 1px;
+    width: 50%;
+    margin-left: 25%;
 }
 
 nav>ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-left: 25%;
     padding-left: 0;
     list-style: none;
 }
 
 nav a {
-    margin-right: 50px;
     text-decoration: none;
     color: var(--text-principal);
     transition: 0.3s;
@@ -50,6 +58,7 @@ nav li:hover p {
     background-color: var(--bgcolor);
     border-radius: 30px;
     border-color: var(--accents);
+    box-shadow: 0 0 20px var(--accents);
     border-style: solid;
     border-width: 1px;
     padding: 20px;

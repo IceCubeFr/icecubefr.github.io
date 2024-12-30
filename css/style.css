@@ -27,11 +27,11 @@ a:hover, #actualPage, nav li:hover>a {
 main {
     margin-left: 10%;
     margin-right: 10%;
-    text-align: space-between;
+    text-align: center;
 }
 
 .separator {
-    background-color: var(--accents);
+    background-color: var(--liens);
     height: 1px;
     width: 50%;
     margin-left: 25%;
@@ -39,16 +39,28 @@ main {
 
 nav>ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
     width: 50%;
-    margin-left: 25%;
     padding-left: 0;
     list-style: none;
+}
+
+nav>ul>li {
+    width: 200px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
     text-decoration: none;
     color: var(--text-principal);
+    text-align: center;
     transition: 0.3s;
 }
 

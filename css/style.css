@@ -27,7 +27,7 @@ a:hover, #actualPage, nav li:hover>a {
 main {
     margin-left: 10%;
     margin-right: 10%;
-    text-align: center;
+    text-align: space-between;
 }
 
 .separator {

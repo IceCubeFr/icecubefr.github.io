@@ -23,6 +23,7 @@ body {
     background-image: url("../media/assassin\'s\ creed.jpg");
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
 }
 
 h1, h2, main a {

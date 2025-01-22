@@ -1,11 +1,13 @@
 :root {
     --primary: #00b7ff;
-    --survol: #338bff;
-    --text-principal: black;
-    --text-secondaire: #A0A0A0;
-    --accents: #338bff;
-    --liens: #00b7ff;
-    --bgcolor: aliceblue;
+    --survol: #6c8fbf;
+    --text-principal: #d0e4f4;
+    --text-secondaire: #4b7b9b;
+    --accents: #3a5f96;
+    --liens: #6c8fbf;
+    --bgcolor: #1a2a5b;
+    --accent-lumineux: #1c9cc6;
+    --bgbox: #283c5c;
 }
 
 body {
@@ -19,17 +21,21 @@ body {
     margin: 0;
     padding: 0;
     margin-top: 30px;
-    height: 300px;
+    height: 40rem;
     background-image: url("../media/assassin\'s\ creed.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
 
-h1, h2, main a {
+h1, h2, h3 {
     color: var(--primary);
     text-shadow: 0 0 20px var(--primary);
     transition: 0.3s;
+}
+
+a {
+    color: var(--liens);
 }
 
 a:hover, #actualPage, nav li:hover>a {
@@ -39,11 +45,6 @@ a:hover, #actualPage, nav li:hover>a {
 
 main {
     text-align: center;
-}
-
-.paragraphes {
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 .separator {
@@ -84,7 +85,7 @@ nav a {
 nav li:hover p {
     display: block;
     width: 200px;
-    background-color: var(--bgcolor);
+    background-color: var(--bgbox);
     border-radius: 30px;
     border-color: var(--accents);
     box-shadow: 0 0 20px var(--accents);

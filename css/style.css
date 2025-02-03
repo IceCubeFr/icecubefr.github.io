@@ -227,6 +227,7 @@ section .paragraphe {
 section .paragraphe p {
     font-size: 100%;
     line-height: 1.5em;
+    text-align: justify;
 }
 
 ul {

@@ -25,7 +25,7 @@ main {
 
 header {
     position: fixed;
-    height: 7%;
+    padding-bottom: 3vh;
     top: 0;
     background-color: var(--bgcolor);
     width: 100%;
@@ -49,6 +49,7 @@ h1, h2 {
 
 h3 {
     color: var(--text-secondaire);
+    height: 3rem;
     text-shadow: 0 0 20px var(--text-secondaire);
     transition: 0.3s;
 }
@@ -96,7 +97,7 @@ nav>ul {
 }
 
 nav>ul li {
-    width: 20vh;
+    width: 15vh;
     padding: 10%;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -134,7 +135,7 @@ nav li p {
     opacity: 0;
 }
 
-p {
+p, ul li {
     color: var(--text-principal);
 }
 
@@ -175,13 +176,13 @@ article p {
 }
 
 article .proj-desc {
-    height: 5rem;
+    height: 15ch;
     overflow: hidden;
 }
 
 article .proj-keywords{
     text-decoration: underline;
-    height: 5rem;
+    height: 5ch;
     margin-bottom: 1rem;
     overflow: hidden;
 }
@@ -200,7 +201,7 @@ section a:hover {
 }
 
 section article img {
-    width: 50vh;
+    width: 100%;
     height: 40vh;
     object-fit: cover;
     object-position: top;
@@ -217,4 +218,18 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+section .paragraphe {
+    width: 75%;
+}
+
+section .paragraphe p {
+    font-size: 100%;
+    line-height: 1.5em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }

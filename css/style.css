@@ -1,242 +1,154 @@
 :root {
-    --primary: #FF6F61;
-    --survol: #6c8fbf;
-    --text-principal: #FFFFFF;
-    --text-secondaire: #00b7ff;
-    --accents: #5C6BC0;
-    --liens: #FF6F61;
-    --bgcolor: #1E1E1E;
-    --accent-lumineux: #BDBDBD;
-    --bgbox: #2C2F38;
+    /* Main colors */
+    --mainbg: aliceblue;
+    --secondbg: #292929;
+    --main: black;
+    --second: white;
+    --accent: #5dade2;
+    
+    /* Tags colors */
+    --devbg: #fcf3cf;
+    --dev: #f4d03f;
+    --gestionbg: #d5f5e3;
+    --gestion: #58d68d;
+    --autrebg: #eaeded;
+    --autre: #aab7b8;
 }
 
 body {
-    background-color: var(--bgcolor);
     margin: 0;
     padding: 0;
+    background-color: var(--mainbg);
+    overflow-x: unset;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-}
-
-main {
-    margin-top: 5%;
-    text-align: center;
 }
 
 header {
     position: fixed;
-    padding-bottom: 3vh;
     top: 0;
-    background-color: var(--bgcolor);
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondbg);
+    color: var(--second);
     z-index: 2;
 }
 
+main {
+    margin: 5vh;
+    margin-top: 5%;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: var(--accent);
+}
+
 .image {
-    margin-top: 30px;
-    height: 40vh;
-    background-image: url("../media/imageNature.jpeg");
+    background-image: url(../media/imageNature.jpeg);
     background-attachment:fixed;
     background-size: cover;
     background-position: bottom;
+    height: 40vh;
+    margin-top: 30px;
 }
 
-h1, h2 {
-    color: var(--text-principal);
-    text-shadow: 0 0 20px var(--text-principal);
-    transition: 0.3s;
+section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10vh;
 }
 
-h3 {
-    color: var(--text-secondaire);
-    height: 3rem;
-    text-shadow: 0 0 20px var(--text-secondaire);
-    transition: 0.3s;
+section .title {
+    border-right: solid;
+    border-color: var(--accent);
+    width: 30%;
 }
 
-h1 {
-    border-bottom: 1px solid;
-    padding-bottom: 2vh;
-}
-
-.titre {
+section .paragraph {
     width: 70%;
-    text-align: center;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    white-space: pre-line;
 }
 
-a {
-    color: var(--liens);
-}
-
-a:hover, nav li:hover>a {
-    color: var(--liens);
-    text-shadow: 0 0 20px var(--liens);
-}
-
-.separator {
-    background-color: var(--liens);
-    height: 1px;
-    width: 50%;
-    margin-left: 25%;
-}
-
-.titre:target {
-    padding-top: 5%;
-}
-
-nav>ul {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
-    width: 50%;
-    padding-left: 0;
+section ul {
     list-style: none;
+    padding: 0;
 }
 
-nav>ul li {
-    width: 15vh;
-    padding: 10%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+section ul li {
+    text-align: justify;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-principal);
-    text-align: center;
-    transition: 0.3s;
-}
-
-nav li:hover p {
-    display: block;
-    width: 200px;
-    background-color: var(--bgbox);
-    border-radius: 30px;
-    border-color: var(--accents);
-    box-shadow: 0 0 20px var(--accents);
-    border-style: solid;
-    border-width: 1px;
-    padding: 20px;
-    opacity: 1;
-}
-
-nav li p {
-    display: none;
-    position: absolute;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-}
-
-p, ul li {
-    color: var(--text-principal);
-}
-
-div.items{
+section.projects div.cards {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    justify-content: space-evenly;
 }
 
-section.competences a, section.projets a {
-    height: 100%;
-    width: 50%;
-}
-
-section article {
-    font-size: normal;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: var(--accent-lumineux);
-    margin: 15px;
-    padding: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease, width 0.3s ease;
-}
-
-section a:hover article {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--accent-lumineux);
-    background-color: var(--bgbox);
-}
-
-article p {
-    padding: 10px;
-}
-
-article .proj-desc {
-    height: 15ch;
-    overflow: hidden;
-}
-
-article .proj-keywords{
-    text-decoration: underline;
-    height: 5ch;
-    margin-bottom: 1rem;
-    overflow: hidden;
-}
-
-section a:hover + article {
-    width: 25%;
-}
-
-section a {
+div.cards a {
     text-decoration: none;
+    color: var(--main);
 }
 
-section a:hover {
-    color: var(--liens);
-    text-shadow: 0 0 0 #FFFFFF;
+section.projects div.cards a article.card {
+    padding: 20px;
+    width: 50vh;
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px var(--secondbg);
+    transition: 0.5s;
+    border-radius: 20px;
 }
 
-section article img {
+section.projects div.cards a article.card:hover {
+    box-shadow: 0 0 10px var(--secondbg);
+    transform: scale(1.02);
+}
+
+article.card img {
+    border-radius: 10px;
     width: 100%;
     height: 40vh;
     object-fit: cover;
     object-position: top;
-    border-radius: 10px 10px 0 0;
 }
 
-section:hover h1 {
-    color: var(--primary);
-    text-shadow: 0 0 20px var(--primary);
-}
-
-section {
-    width: 100%;
+ul.tags {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    gap: 20px;
+    line-height: 1;
 }
 
-section .paragraphe {
-    width: 75%;
+ul.tags li {
+    margin: 0;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style: none;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
 }
 
-section .paragraphe p {
-    font-size: 100%;
-    line-height: 1.5em;
-    text-align: justify;
+ul.tags li.dev {
+    color: var(--dev);
+    border-color: var(--dev);
+    background-color: var(--devbg);
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+ul.tags li.gestion {
+    color: var(--gestion);
+    border-color: var(--gestion);
+    background-color: var(--gestionbg);
 }
 
-@media screen and (max-width: 1000px) {
-    section.projets a {
-        width: 100%;
-    }
+ul.tags li.autre {
+    color: var(--autre);
+    border-color: var(--autre);
+    background-color: var(--autrebg);
 }

@@ -8,11 +8,11 @@
     
     /* Tags colors */
     --devbg: #fcf3cf;
-    --dev: #f4d03f;
+    --dev: #b7950b;
     --gestionbg: #d5f5e3;
-    --gestion: #58d68d;
+    --gestion: #148f77;
     --autrebg: #eaeded;
-    --autre: #aab7b8;
+    --autre: #717d7e;
 }
 
 body {
@@ -36,7 +36,7 @@ header {
 }
 
 main {
-    margin: 5vh;
+    margin: 50px;
     margin-top: 5%;
     text-align: center;
 }
@@ -46,12 +46,34 @@ h1, h2, h3 {
 }
 
 .image {
-    background-image: url(../media/imageNature.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/imageNature.jpeg);
     background-attachment:fixed;
     background-size: cover;
     background-position: bottom;
-    height: 40vh;
     margin-top: 30px;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    text-align: center;
+}
+
+.image>p, .image>p>a {
+    color: var(--second);
+    text-shadow: 0 0 15px var(--mainbg);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.image>p>a:hover {
+    font-size: large;
+    text-shadow: 0 0 20px var(--mainbg);
+}
+
+.image>h1 {
+    text-shadow: 0 0 15px var(--accent);
+}
+
+#topic:target {
+    padding-top: 70px;
 }
 
 section {
@@ -63,11 +85,12 @@ section {
 section .title {
     border-right: solid;
     border-color: var(--accent);
-    width: 30%;
+    width: 20%;
+    
 }
 
 section .paragraph {
-    width: 70%;
+    width: 80%;
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
@@ -86,7 +109,11 @@ section ul li {
 section.projects div.cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 div.cards a {
@@ -96,7 +123,7 @@ div.cards a {
 
 section.projects div.cards a article.card {
     padding: 20px;
-    width: 50vh;
+    width: 20rem;
     margin-bottom: 30px;
     box-shadow: 0 0 5px var(--secondbg);
     transition: 0.5s;
@@ -111,39 +138,42 @@ section.projects div.cards a article.card:hover {
 article.card img {
     border-radius: 10px;
     width: 100%;
-    height: 40vh;
+    height: 15rem;
     object-fit: cover;
     object-position: top;
 }
 
-ul.tags {
+article.card>h3 {
+    height: 1rem;
+}
+
+article.card>p {
+    height: 5rem;
+}
+
+article.card ul.tags {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0;
-    gap: 20px;
+    align-items:flex-start;
+    padding: 0;
     line-height: 1;
+    height: 6rem;
 }
 
 ul.tags li {
-    margin: 0;
-    padding: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin: 0 10px 10px 0;
+    padding: 5px 10px 5px 10px;
     list-style: none;
-    border-radius: 30px;
-    border-style: solid;
-    border-width: 2px;
+    border-radius: 5px;
 }
 
 ul.tags li.dev {
     color: var(--dev);
-    border-color: var(--dev);
     background-color: var(--devbg);
 }
 
 ul.tags li.gestion {
     color: var(--gestion);
-    border-color: var(--gestion);
     background-color: var(--gestionbg);
 }
 
@@ -151,4 +181,17 @@ ul.tags li.autre {
     color: var(--autre);
     border-color: var(--autre);
     background-color: var(--autrebg);
+}
+
+@media screen and (max-width:1000px) {
+    section {
+        flex-direction: column;
+    }
+
+    section .title {
+        border-right: none;
+        border-bottom: solid var(--accent);
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }

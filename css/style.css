@@ -7,6 +7,7 @@ html { scroll-behavior: smooth; }
     --main: black;
     --second: white;
     --accent: #5dade2;
+    --gold-project: #b7950b;
     
     /* Tags colors */
     --devbg: #fcf3cf;
@@ -68,9 +69,43 @@ h1, h2, h3 {
     text-align: center;
     height: 55vh;
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
+
+.scroll-container {
+    width: 500px;
+    height: 70px;
+    padding-bottom: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.scroll-track {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+
+.scroll-texts {
+    color: var(--second);
+    min-width: 400px;
+    max-height: 70px;
+    padding-right: 100px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+/* Animation continue */
+@keyframes scroll {
+    0% { transform: translateX(500px); }
+    100% { transform: translateX(-2100px); } /* total largeur des 4 textes originaux */
+}
+
 
 .scroll {
     filter: invert(100%);
@@ -80,13 +115,29 @@ h1, h2, h3 {
     color: var(--second);
     width: 20%;
     height: 20%;
+    padding-bottom: 10px;
+    padding-top: 0;
     text-shadow: 0 0 15px var(--mainbg);
     text-decoration: none;
     transition: 0.5s;
+    animation: bump 10s linear infinite;
 }
 
 .scroll:hover {
     transform: scale(1.02);
+}
+
+@keyframes bump {
+    0%{ padding-bottom: 10px; padding-top: 0;}
+    2%{padding-bottom: 0; padding-top: 10px;}
+    4%{ padding-bottom: 10px; padding-top: 0;}
+    6%{padding-bottom: 0; padding-top: 10px;}
+    8%{ padding-bottom: 10px; padding-top: 0;}
+    15%{padding-bottom: 10px; padding-top: 0;}
+    17%{ padding-bottom: 0; padding-top: 10px;}
+    19%{padding-bottom: 10px; padding-top: 0;}
+    21%{padding-bottom: 0; padding-top: 10px;}
+    23%{padding-bottom: 10px; padding-top: 0;}
 }
 
 #topic:target, #exp-studies:target, #skills:target, #projects:target {
@@ -149,6 +200,7 @@ div.cards a {
 section.projects div.cards a article.card {
     padding: 20px;
     width: 20rem;
+    height: 40rem;
     margin-bottom: 30px;
     box-shadow: 0 0 5px var(--secondbg);
     transition: 0.5s;
@@ -168,12 +220,25 @@ article.card img {
     object-position: top;
 }
 
+article.card img.forceleft {
+    object-fit: cover; 
+    object-position: left;
+}
+
+article.card#gold {
+    box-shadow: 0 0 5px var(--gold-project);
+}
+
+article.card#gold:hover {
+    box-shadow: 0 0 10px var(--gold-project);
+}
+
 article.card>h3 {
     height: 1rem;
 }
 
 article.card>p {
-    height: 9rem;
+    height: 10rem;
 }
 
 ul.tags {

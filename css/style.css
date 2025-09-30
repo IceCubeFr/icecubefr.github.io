@@ -43,9 +43,14 @@ header {
     z-index: 2;
 }
 
-header>a {
+header>a, header>p {
+    display: block;
     color: var(--second);
     text-decoration: none;
+}
+
+header>p {
+    display: none;
 }
 
 main {
@@ -323,17 +328,25 @@ footer a {
         width: 100%;
         padding: 0;
     }
+}
 
+@media (max-width: 768px) {
+    header, footer {
+        transform: scale(1.5);
+    }
+
+    header>a {
+        display: none;
+    }
+
+    header>p {
+        display: block;
+    }
     .cards {
-        align-items: center;
+        margin: 0;
     }
 
-    header {
-        height: 100px;
-    }
+    .card {
 
-    footer {
-        padding: 20px;
     }
-
 }

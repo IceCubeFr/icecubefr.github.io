@@ -43,19 +43,14 @@ header {
     z-index: 2;
 }
 
-header>a, header>p {
+header>a {
     display: block;
     color: var(--second);
     text-decoration: none;
 }
 
-header>p {
-    display: none;
-}
-
 main {
-    margin: 50px;
-    margin-top: 5%;
+    margin: 5% 50px 50px;
     text-align: center;
 }
 
@@ -188,12 +183,10 @@ section ul li {
 }
 
 section.projects div.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 3%;
-    width: 80%;
+    display: grid;
+    gap: 20px;
     padding-left: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 div.cards a {
@@ -201,13 +194,17 @@ div.cards a {
     color: var(--main);
 }
 
+section.projects div.cards a {
+    display: block;
+    margin: 30px;
+}
+
 article.card {
     padding: 20px;
-    min-width: 80%;
+    height: auto;
+    min-height: 40rem;
     width: 100%;
-    max-width: 20rem;
-    height: 40rem;
-    margin-bottom: 10%;
+    margin: 10px;
     box-shadow: 0 0 5px var(--secondbg);
     transition: 0.5s;
     border-radius: 20px;
@@ -328,25 +325,62 @@ footer a {
         width: 100%;
         padding: 0;
     }
+
+    section.projects div.cards {
+        padding: 0;
+    }
+
+    header, footer {
+        height: 60px;
+    }
 }
 
-@media (max-width: 768px) {
-    header, footer {
-        transform: scale(1.5);
+@media screen and (max-width: 900px) {
+    section.exp-studies,
+    section.exp-studies .paragraph,
+    section.exp-studies .title {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
     }
-
-    header>a {
-        display: none;
+    section.exp-studies .title {
+        border-right: none;
+        border-bottom: solid 2px var(--accent);
+        width: 100%;
+        padding-bottom: 10px;
     }
-
-    header>p {
-        display: block;
+    section.exp-studies .paragraph {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        min-width: 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
-    .cards {
+    ul.tags {
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+    ul.tags li {
+        font-size: 0.95em;
+        padding: 5px 8px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 600px) {
+    main,
+    section.projects,
+    section.exp-studies .paragraph,
+    section.exp-studies .title {
+        padding: 0;
         margin: 0;
+        font-size: 1em;
     }
-
-    .card {
-
+    ul.tags {
+        font-size: 1em;
     }
 }

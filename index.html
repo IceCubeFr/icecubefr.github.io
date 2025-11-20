@@ -9,7 +9,37 @@
         <title>Florian GAVOILLE</title>
     </head>
     <body>
-        <header>
+    <!-- From Uiverse.io by BridgerSilk -->
+    <div class="banter-loader" id="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+    </div>
+    <script>
+        const MIN_TIME = 500;
+        const start = Date.now();
+
+        window.addEventListener("load", () => {
+            const elapsed = Date.now() - start;
+            const remaining = Math.max(0, MIN_TIME - elapsed);
+
+            setTimeout(() => {
+                document.getElementById("banter-loader").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("banter-loader").style.display = "none";
+                    document.getElementById("all").style.display = "block";
+                }, 300);
+            }, remaining);
+        });
+    </script>
+    <div id="all" style="display: none">
+    <header>
             <a href="./index.html">Portfolio de Florian GAVOILLE</a>
         </header>
         <div class="image">
@@ -30,10 +60,12 @@
                 </div>
                 <div class="paragraph">
                     <p>
-                        Je suis étudiant en première année de BUT Informatique et je suis diplômé du Baccalauréat général mention bien avec Mathématiques et Numérique Sciences Informatiques. <br>
+                        Je suis étudiant en deuxième année de BUT Informatique et je suis diplômé du Baccalauréat général mention bien avec Mathématiques et Numérique Sciences Informatiques. <br>
                         J'ai un niveau B2 en anglais que je ne cesse de perfectionner par le biais des cours, d'applications dédiées et de communications avec des anglais natifs sur différents jeux. <br>
-                        Grâce à mes différentes expériences, aux projets que j'ai effectués et à mes études, que je détaillerai ci-après, j'ai pu acquérir de nombreusees compétences, telles que la gestion communautaire, l'aide à la personne, le développement d'applications ou de modules complémentaires de jeu, mais encore mon expression orale comme écrite de manière professionnelle.
-
+                        Grâce à mes différentes expériences, aux projets que j'ai effectués et à mes études, que je détaillerai ci-après, j'ai pu acquérir de nombreuses compétences, telles que la gestion communautaire, l'aide à la personne, le développement d'applications ou de modules complémentaires de jeu, mais encore mon expression orale comme écrite de manière professionnelle. <br>
+                        Mon objectif de vie serait de pouvoir allier compétences et passions en travaillant dans le développement d'applications utilisées dans les transports en commun (signaux, matériel de bord, information voyageur, pilotes automatiques...)<br>
+                        Pour finir, vous trouverez tout mon profil détaillé ci-dessous !<br>
+                        - Florian GAVOILLE
                     </p>
                 </div>
             </section>
@@ -243,5 +275,6 @@
         <footer>
             <p>Florian GAVOILLE - 2025 - V1 - Tous droits réservés - <a href="mentions.html">Mentions légales</a></p>
         </footer>
+    </div>
     </body>
 </html>

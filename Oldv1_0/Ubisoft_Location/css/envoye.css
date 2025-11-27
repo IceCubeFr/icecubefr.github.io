@@ -1,0 +1,24 @@
+main {
+    margin: 0;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../medias/just_dance.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    padding-top: 500px;
+    padding-bottom: 500px;
+    overflow-y:hidden;
+    overflow-x: hidden;
+}
+
+main p, main h1 {
+    text-shadow: 0 0 30px black;
+    color: white;
+    transition: 1s;
+}
+
+main p:hover, main h1:hover {
+    text-shadow: 0 0 50px #d80388;
+}

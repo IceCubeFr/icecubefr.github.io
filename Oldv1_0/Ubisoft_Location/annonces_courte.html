@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="icon" href="./medias/favicon.png" type="image/png">
+        <title>Ubisoft Location - Annonces</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/annonces.css">
+        <link rel="stylesheet" href="./css/menu.css">
+    </head>
+    <body>
+        <header>
+            <menu>
+                <a href="./index.html"><img alt="logo ubisoft" src="./medias/logo.png"></a>
+                <nav>
+                    <li><button onclick="window.location.href = './index.html'">Accueil</button></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="annonces">Annonces</button>
+                            <div class="dropItems">
+                                <a id="actualPage" href="./annonces_courte.html">Location courte durée</a>
+                                <a href="./annonces_longue.html">Location longue durée</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><button onclick="window.location.href = './nouvelle_annonce.html'">Nouvelle Annonce</button></li>
+                    <li><button onclick="window.location.href = './mes_annonces.html'">Mes annonces</button></li>
+                </nav>
+            </menu>
+        </header>
+        <main>
+            <div class="corpsPageAnnonce">
+                <h2 id="titreAnnonces">Toutes les annonces pour une location ponctuelle (max 3 jours)</h2>
+                <section class="filtres">
+                    <button class="bouttonFiltre">Filtres <img alt="Flèche" src="./medias/fleche.png"></button>
+                    <fieldset id="filtre">
+                        <h3>Filtres</h3>
+                        <form>
+                            Véhicule :
+                            <br>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="velo"
+                                    name="vehicules"
+                                    checked
+                                />Vélo
+                            </label>
+                            <br>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="veloelec"
+                                    name="vehicules"
+                                    checked
+                                />Vélo électrique
+                            </label>
+                            <br>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="troti"
+                                    name="vehicules"
+                                    checked
+                                />Trotinette
+                            </label>
+                            <br>
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="trotielec"
+                                    name="vehicules"
+                                    checked
+                                />Trotinette électrique
+                            </label>
+                            <br>
+                            <label>Studio de rattachement du véhicule :
+                                <br> 
+                                <select name="departement" id="dpt" required>
+                                    <option value="0">Partout (France)</option>
+                                    <option value="33">Gironde (33)</option>
+                                    <option value="34">Hérault (34)</option>
+                                    <option value="69">Rhône (69)</option>
+                                    <option value="74">Haute-Savoie (74)</option>
+                                    <option value="75">Paris (75)</option>
+                                </select>
+                            </label>
+                            <br>
+                            <label>Rayon :
+                                <br>5 km
+                                <input
+                                    type="range"
+                                    id="rayon"
+                                    name="rayon"
+                                    min="5"
+                                    max="25"
+                                    step="5"
+                                    value="10"
+                                />25 km
+                            </label>
+                            <br>
+                            <button type="submit">Appliquer</button>
+                        </form>
+                    </fieldset>
+                </section>
+                <section id="annonces">
+                    <div class="annonce">
+                        <p>Annonce de l'agent : Toto</p>
+                        <img src="./medias/imgVehicules/velo_electrique_2.jpg">
+                        
+                        <p><b>Vélo électrique</b></p>
+                        <p>Studio de Gironde (33)</p>
+                        <p>Ville : <b>Bordeaux</b></p>
+                        <p>Description :  vélo électrique acheté en 2021, très bon état, chargeur fourni</p>
+                        <a href="mailto:toto.tutu.etu@univ-lille.fr">E-mail</a>
+                        <a href="tel:0726517658">Téléphone</a><br>
+                    </div>
+                    <div class="annonce">
+                        <p>Annonce de l'agent : Titi</p>
+                        <img src="./medias/imgVehicules/vélo_5.jpg">
+                        
+                        <p><b>Vélo</b></p>
+                        <p>Studio de Rhône (69)</p>
+                        <p>Ville : <b>Lyon</b></p>
+                        <p>Description : Je propose de louer mon vélo acheté en 2019, plutôt bien entretenu, selle un peu abîmée</p>
+                        <a href="mailto:titi.durant.etu@univ-lille.fr">E-mail</a>
+                        <a href="tel:927168528">Téléphone</a><br>
+                    </div>
+                    <div class="annonce">
+                        <p>Annonce de l'agent : Michel</p>
+                        <img src="./medias/imgVehicules/trotinette_electrique_2.jpg">
+                        
+                        <p><b>Trotinette électrique</b></p>
+                        <p>Studio de Rhône (69)</p>
+                        <p>Ville : <b>Vénissieux</b></p>
+                        <p>Description :  Trotinette électrique en très bon état. Batterie qui dure longtemps, à charger uniquement avec le chargeur fourni</p>
+                        <a href="mailto:michel.berger.etu@gmail.fr">E-mail</a>
+                        <a href="tel:1892073654">Téléphone</a><br>
+                    </div>
+                    <div class="annonce">
+                        <p>Annonce de l'agent : Karine</p>
+                        <img src="./medias/imgVehicules/trotinette_electrique_3.jpg">
+                        
+                        <p><b>Trotinette électrique</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Paris</b></p>
+                        <p>Description :  Trotinette électrique toute neuve. Lampe intégrée et possibilité de repartir aussi avec le casque</p>
+                        <a href="mailto:karine.leconte.etu@outlook.com">E-mail</a>
+                        <a href="tel:0627638975">Téléphone</a><br>
+                    </div>
+                    <div class="annonce">
+                        <p>Annonce de l'agent : Patrick</p>
+                        <img src="./medias/imgVehicules/trotinette_3.jpg">
+                        
+                        <p><b>Trotinette</b></p>
+                        <p>Studio de Gironde (33)</p>
+                        <p>Ville : <b>Mérignac</b></p>
+                        <p>Description :  Trotinette petite taille, mais très costaud</p>
+                        <a href="mailto:patrick.sebastien.etu@gmail.com">E-mail</a>
+                        <a href="tel:0726789260">Téléphone</a><br>
+                    </div>
+                    <div class="annonce">
+                        <p>Annonce de l'agent : Florian</p>
+                        <img src="./medias/imgVehicules/vélo_4.jpg">
+                        
+                        <p><b>Vélo</b></p>
+                        <p>Studio de Paris (75)</p>
+                        <p>Ville : <b>Annoeullin</b></p>
+                        <p>Description :  vélo jaune en excellent état. Les pneus à regonfler légérement, mais tout le matériel (casque, pompe, lampe,...) peuvent être empruntées</p>
+                        <a href="mailto:florian.gavoille.etu@univ-lille.fr">E-mail</a>
+                        <a href="tel:0627101722">Téléphone</a><br>
+                    </div>
+                    <div class="annonce">
+                        <p>Annonce de l'agent : Julia</p>
+                        <img src="./medias/imgVehicules/velo_electrique_4.jpg">
+                        
+                        <p><b>Vélo électrique</b></p>
+                        <p>Studio de Haute-Savoie (74)</p>
+                        <p>Ville : <b>Annecy</b></p>
+                        <p>Description :  vélo électrique. Bon état </p>
+                        <a href="mailto:julia.truc.etu@outlook.fr">E-mail</a>
+                        <a href="tel:1234567809">Téléphone</a><br>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p id="rights">2024 - Université de Lille - Tous droits réservés</p>
+            <p id="mentions"><a href="./mentions légales.html">Mentions Legales</a></p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="icon" href="./medias/favicon.png" type="image/png">
+        <title>Ubisoft Location - Nouvelle Annonce</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/nouvelle-annonce.css">
+    </head>
+    <body>
+        <header>
+            <menu>
+                <a href="./index.html"><img alt="logo ubisoft" src="./medias/logo.png"></a>
+                <nav>
+                    <li><button onclick="window.location.href = './index.html'">Accueil</button></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="annonces">Annonces</button>
+                            <div class="dropItems">
+                                <a href="./annonces_courte.html">Location courte durée</a>
+                                <a href="./annonces_longue.html">Location longue durée</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><button id="actualPage" onclick="window.location.href = './nouvelle_annonce.html'">Nouvelle Annonce</button></li>
+                    <li><button onclick="window.location.href = './mes_annonces.html'">Mes annonces</button></li>
+                </nav>
+            </menu>
+        </header>
+        <main>
+            <form action="./envoye.html">
+                <fieldset>
+                    <h3>Mettez votre matériel en location et contribuez à la sauvegarde de notre planète !</h3>
+                    <p>Vous êtes identifié(e) sous le nom de nomAgent.</p>
+                    <label>Nom d'utilisateur : 
+                        <input 
+                            type="text"
+                            id="username"
+                            name="NomUser"
+                            placeholder="Nom d'utilisateur"
+                            required
+                        />
+                    </label>
+                    <br>
+                    <label>Type de véhicule : 
+                        <select name="vehicle" id="vehicle" required>
+                            <option value="">--Sélectionnez un véhicule--</option>
+                            <option value="velo">Vélo</option>
+                            <option value="velo-elec">Vélo électrique</option>
+                            <option value="trotinette">Trotinette</option>
+                            <option value="trotinette-elec">Trotinette électrique</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>Photo du véhicule (png, jpg, jpeg) : 
+                        <input
+                            type="file"
+                            id="photos"
+                            name="photos"
+                            accept="image/png, image/jpg, image/jpeg"
+                        />
+                    </label>
+                    <br>
+                    Durée de la location :<br>
+                    <label class="radio">
+                        <input
+                            type="radio"
+                            name="duree"
+                            id="courteduree"
+                            value="courteduree"
+                        />Ponctuelle (1-3 jours)
+                    </label>
+                    <label class="radio">
+                        <input
+                            type="radio"
+                            name="duree"
+                            id="longueduree"
+                            value="longueduree"
+                            required
+                        />Longue durée (4 jours et +)
+                    </label>
+                    <label>Ville : 
+                        <input
+                            type="text"
+                            id="ville"
+                            name="ville"
+                            placeholder="Votre ville"
+                            required
+                        />
+                    </label>
+                    <br>
+                    <label>Studio de rattachement du véhicule :
+                        <select name="departement" id="dpt" required>
+                            <option value="33">Gironde (33)</option>
+                            <option value="34">Hérault (34)</option>
+                            <option value="69">Rhône (69)</option>
+                            <option value="74">Haute-Savoie (74)</option>
+                            <option value="75">Paris (75)</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>Téléphone : 
+                        <input
+                            type="phone"
+                            name="phone"
+                            id="phone"
+                            placeholder="0X.XX.XX.XX.XX"
+                            required
+                        />
+                    </label>
+                    <br>
+                    <label>E-mail : 
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="email@example.xyz"
+                            title="Entrez une adresse mail valide"
+                            pattern=".+@+.+\..+"
+                            required
+                        />
+                    </label>
+                    <br>
+                    <label>Description du matériel :
+                        <br>
+                        <textarea
+                            id="description"
+                            name="description"
+                            placeholder="Décrivez votre matériel (n'oubliez pas de préciser son état!)"
+                            title="Merci d'être précis dans votre description"
+                            wrap="hard"
+                            rows="5"
+                            required
+                        ></textarea>
+                    </label>
+                </fieldset>
+                <br>
+                <div class="boutons">
+                    <button type="submit">Envoyer</button>
+                    <button type="reset">Effacer</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <p id="rights">2024 - Université de Lille - Tous droits réservés</p>
+            <p id="mentions"><a href="./mentions légales.html">Mentions Legales</a></p>
+        </footer>
+    </body>
+</html>

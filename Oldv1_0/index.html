@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link href="./css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=2.0">
+        <title>Florian GAVOILLE</title>
+    </head>
+    <body>
+    <!-- From Uiverse.io by BridgerSilk -->
+    <div class="banter-loader" id="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+    </div>
+    <script>
+        const MIN_TIME = 500;
+        const start = Date.now();
+
+        window.addEventListener("load", () => {
+            const elapsed = Date.now() - start;
+            const remaining = Math.max(0, MIN_TIME - elapsed);
+
+            setTimeout(() => {
+                document.getElementById("banter-loader").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("banter-loader").style.display = "none";
+                    document.getElementById("all").style.display = "block";
+                }, 300);
+            }, remaining);
+        });
+    </script>
+    <div id="all" style="display: none">
+    <header>
+            <a href="./index.html">Portfolio de Florian GAVOILLE</a>
+        </header>
+        <div class="image">
+            <div class="scroll-container">
+                <div class="scroll-track">
+                    <div class="scroll-texts">Je développe</div>
+                    <div class="scroll-texts">J'apprends</div>
+                    <div class="scroll-texts">Je crée</div>
+                    <div class="scroll-texts">J'innove</div>
+                </div>
+            </div>
+            <a href="#topic"><p><img src="media/arrow_scroll.png" class="scroll" alt="scroll"></p></a>
+        </div>
+        <main>
+            <section class="topic" id="topic">
+                <div class="title">
+                    <h1>A propos de moi</h1>
+                </div>
+                <div class="paragraph">
+                    <p>
+                        Je suis étudiant en deuxième année de BUT Informatique et je suis diplômé du Baccalauréat général mention bien avec Mathématiques et Numérique Sciences Informatiques. <br>
+                        J'ai un niveau B2 en anglais que je ne cesse de perfectionner par le biais des cours, d'applications dédiées et de communications avec des anglais natifs sur différents jeux. <br>
+                        Grâce à mes différentes expériences, aux projets que j'ai effectués et à mes études, que je détaillerai ci-après, j'ai pu acquérir de nombreuses compétences, telles que la gestion communautaire, l'aide à la personne, le développement d'applications ou de modules complémentaires de jeu, mais encore mon expression orale comme écrite de manière professionnelle. <br>
+                        Mon objectif de vie serait de pouvoir allier compétences et passions en travaillant dans le développement d'applications utilisées dans les transports en commun (signaux, matériel de bord, information voyageur, pilotes automatiques...)<br>
+                        Pour finir, vous trouverez tout mon profil détaillé ci-dessous !<br>
+                        - Florian GAVOILLE
+                    </p>
+                </div>
+            </section>
+            <section class="exp-studies" id="exp-studies">
+                <div class="title">
+                    <h1>Expérience, études & compétences associées</h1>
+                </div>
+                <div class="paragraph">
+                    <p><ul>
+                        <li><b>2021 / 2024</b> - Lycée public Marguerite de Flandre, 59266, Gondecourt</li>
+                        <ul class="tags">
+                            <li class="dev">Python</li>
+                            <li class="ang">Anglais</li>
+                            <li class="ang">Espagnol</li>
+                            <li class="autre">Mathématiques</li>
+                        </ul>
+                        <li><b>Session 2024</b> - Baccalauréat général mention Bien, spécialités Mathématiques et NSI</li>
+                        <ul class="tags">
+                            <li class="autre">Diplôme</li>
+                        </ul>
+                        <li><b>Février 2024 / Août 2024</b> - Membre bénévole de l'équipe support d'un jeu vidéo nommé NovaLife:Amboise</li>
+                        <ul class="tags">
+                            <li class="dev">Résolution de problèmes techniques</li>
+                            <li class="gestion">Gestion communautaire</li>
+                        </ul>
+                        <li><b>Novembre 2023 / Septembre 2025</b> - Administrateur bénévole d'un serveur communautaire rassemblant plus de 1300 membres</li>
+                        <ul class="tags">
+                            <li class="gestion">Gestion communautaire</li>
+                        </ul>
+                        <li><b>Juillet 2025</b> - Tuteur de maisonnée pour le SNU. J'ai eu à ma charge 12 jeunes de 15-17 ans pendant 15 jours.</li>
+                        <ul class="tags">
+                            <li class="gestion">Gestion de jeunes</li>
+                            <li class="autre">Prise de responsabilités</li>
+                            <li class="autre">Mise en place d'activités</li>
+                            <li class="autre">Engagement</li>
+                        </ul>
+                        <li><b>Depuis Septembre 2024</b> - Etudiant en BUT Informatique, IUT de Lille, Université de Lille, 59009, Villeneuve d'Ascq</li>
+                        <ul class="tags">
+                            <li class="dev">Java</li>
+                            <li class="dev">Web</li>
+                            <li class="dev">Réseaux et système</li>
+                            <li class="comm">Communication</li>
+                            <li class="ang">Anglais</li>
+                        </ul>
+                        <li><b>Depuis juillet 2025</b> - Rédacteur pour l'association Mobilille, association de défense des droits des usagers du réseau Ilévia</li>
+                        <ul class="tags">
+                            <li class="comm">Editorial</li>
+                            <li class="comm">Rédaction</li>
+                            <li class="autre">Engagement</li>
+                        </ul>
+                    </ul></p>
+                </div>
+            </section>
+            <section class="skills" id="skills">
+                <div class="title">
+                    <h1>Compétences générales</h1>
+                </div>
+                <div class="paragraph">
+                    <p><ul>
+                        <li><b>Développement / Java</b> - En cours d'apprentissange à l'université, je connais déjà les bases de ce langage</li>
+                        <li><b>Développement / Web</b> - Connaissances solides en HTML et CSS (ce site en est la preuve), quelques bases du javascript</li>
+                        <li><b>Développement / Python</b> - J'ai déjà pu réaliser quelques projets au lycée dans ce langage que je maîtrise</li>
+                        <li><b>Développement / Git</b> - Utilisation régulière en cours des commandes de base et de la bonne gestion d'un dépôt Git</li>
+                        <li><b>Gestion de projet</b> - Bonnes connaissances par le biais des différents cours suivis à l'université mais également par mes expériences dans le milieu associatif</li>
+                        <li><b>Travail en équipe</b> - Facilités d'intégration au sein d'une équipe dans le cadre d'un projet</li>
+                    </ul></p>
+                </div>
+            </section>
+            <section class="projects" id="projects">
+                <div class="title">
+                    <h1>Mes projets universitaires et personnels</h1>
+                </div>
+                <div class="cards">
+                    <a href="https://github.com/IceCubeFr/Double-Langue">
+                        <article class="card">
+                            <h3>Double Langue</h3>
+                            <p>
+                                Projet de développement en ijava (une bibliothèque java facilitant la prise en main du langage, créé spécialement pour le BUT). 
+                                Nous devions créer un jeu ludo-pédagogique répondant à certains critères.
+                            </p>
+                            <img src="./media/doublelangue.png" alt="Capture du jeu Double Langue">
+                            <ul class="tags">
+                                <li class="dev">iJava</li>
+                                <li class="gestion">Gestion de projet</li>
+                                <li class="ang">Anglais</li>
+                                <li class="autre">Travail d'équipe</li>
+                                <li class="autre">Semestre 1</li>
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="./Ubisoft_Location/index.html">
+                        <article class="card">
+                            <h3>Ubisoft Location</h3>
+                            <p>
+                                Projet WEB de premier semestre. Nous devions créer un site de location de véhicule vert ou de co-voiturage pour une entreprise du numérique. Le travail a été effectué en groupe de 3.
+                            </p>
+                            <img src="./media/ubiLocAccueil.png" alt="Capture du site Ubisoft Location">
+                            <ul class="tags">
+                                <li class="dev">Web statique</li>
+                                <li class="gestion">Gestion de projet</li>
+                                <li class="gestion">Etude d'entreprise</li>
+                                <li class="comm">Communication</li>
+                                <li class="autre">Semestre 1</li>
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="https://github.com/IceCubeFr/BDD-BUT1">
+                        <article class="card">
+                            <h3>Introduction bases de données</h3>
+                            <p>
+                                Projet de semestre 1, effectué en groupe de 2, le projet consistait à créer un système d'information pour un garage auto avec le logiciel Access, ainsi que d'en étudier le marché.
+                            </p>
+                            <img src="./media/garage.jpeg" alt="Image générée par IA représentant un garagiste">
+                            <ul class="tags">
+                                <li class="dev">Access</li>
+                                <li class="dev">Création Système d'Information</li>
+                                <li class="gestion">Étude de marché</li>
+                                <li class="autre">Semestre 1</li>
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="https://github.com/IceCubeFr/NearbyShare">
+                        <article class="card">
+                            <h3>NearbyShare</h3>
+                            <p>
+                                Projet personnel pour un jeu vidéo nommé NovaLife:Amboise. Il s'agit d'un projet effectué dans le cadre de l'apprentissage de la programmation en C#. Le projet n'est plus mis à jour.
+                            </p>
+                            <img src="https://camo.githubusercontent.com/eb8808467f494f6b70e7b9eac4e8bd998a030a36278ba72fdd4afb5707ff61eb/68747470733a2f2f692e6962622e636f2f6d4667594b67672f612d62616e6e65722d776974682d7468652d746578742d6e656172627973686172652d616e642d74776f2d736d61727470682d786f2d48435a435a5455712d44657a302d4b53632d415153512d57732d4d51382d352d5452542d31342d5371632d44632e6a7067" alt="Bannière de présentation du plugin">
+                            <ul class="tags">
+                                <li class="dev">C#</li>
+                                <li class="gestion">Auto didacte</li>
+                                <li class="autre">Jeu vidéo</li>
+                                <li class="autre">Plugin</li>
+                                <li class="autre">Projet personnel 2024</li>
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="https://github.com/IceCubeFr/s201-s202">
+                        <article class="card">
+                            <h3>Échanges internationaux</h3>
+                            <p>
+                                Projet de fin de semestre 2, effectué en groupe de 3, nous devions créer une application d'échanges de jeunes internationaux avec interface. Je me suis principalement concentré sur l'IHM.
+                            </p>
+                            <img src="./media/echanges_internationaux.png" alt="Capture d'écran du programme final" class="forceleft">
+                            <ul class="tags">
+                                <li class="dev">Java</li>
+                                <li class="dev">Graphes</li>
+                                <li class="dev">Java FX / IHM</li>
+                                <li class="gestion">Gestion de projet</li>
+                                <li class="autre">Travail en équipe</li>
+                                <li class="autre">Semestre 2</li>
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="https://github.com/IceCubeFr/BDD-BUT1">
+                        <article class="card">
+                            <h3>Jeux Olympiques</h3>
+                            <p>
+                                Projet de semestre 2, effectué en groupe de 2, chaque groupe devait choisir une édition des jeux olympiques et devait en faire une étude statistique à partir du sujet.
+                            </p>
+                            <img src="./media/paris24.jpg" alt="Logo des jeux olympiques de paris 2024">
+                            <ul class="tags">
+                                <li class="dev">SQL</li>
+                                <li class="comm">Étude statistique</li>
+                                <li class="comm">Rédaction de rapport</li>
+                                <li class="autre">Travail en équipe</li>
+                                <li class="autre">Semestre 2</li>
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="https://github.com/IceCubeFr/S2.03">
+                        <article class="card">
+                            <h3>Installation services réseaux</h3>
+                            <p>
+                                Projet de semestre 2, effectué en groupe de 4, ce projet avait pour objectif principal de nous apprendre comment créer un serveur et mettre en place un système de stockage de projets similaire à Github : Gitea.
+                            </p>
+                            <img src="./media/datacenter.png" alt="Photo d'un datacenter">
+                            <ul class="tags">
+                                <li class="dev">Connexion serveur</li>
+                                <li class="dev">Gitea</li>
+                                <li class="ang">Anglais</li>
+                                <li class="comm">Rédaction de rapport</li>
+                                <li class="autre">Semestre 2</li>
+                            </ul>
+                        </article>
+                    </a>
+                    <a href="https://github.com/IceCubeFr/ElectionsSim">
+                        <article class="card" id="gold">
+                            <h3>ElectionsSim</h3>
+                            <p>
+                                Projet personnel, effectué seul, projet effectué dans le cadre de mon emploi à Aroeven Hauts De France pour le poste de tuteur de maisonnée au SNU. Effectué de manière volontaire, sans demande, pour permettre des élections numériques
+                            </p>
+                            <img src="./media/ElectionSim.png" alt="Capture d'écran de la page d'accueil de l'application" class="forceleft">
+                            <ul class="tags">
+                                <li class="dev">Java</li>
+                                <li class="dev">JavaFX / IHM</li>
+                                <li class="gestion">Gestion d'élections</li>
+                                <li class="autre">Projet personnel</li>
+                                <li class="autre">SNU 2025</li>
+                            </ul>
+                        </article>
+                    </a>
+                </div>
+            </section>
+            <p class="note">Note: Le site est voué à être amélioré et complété dans le temps. Certains projets majeurs ne sont pas encore renseignés.</p>
+        </main>
+        <footer>
+            <p>Florian GAVOILLE - 2025 - V1 - Tous droits réservés - <a href="mentions.html">Mentions légales</a></p>
+        </footer>
+    </div>
+    </body>
+</html>

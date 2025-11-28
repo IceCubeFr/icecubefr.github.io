@@ -154,7 +154,7 @@ main {
     margin-right: auto;
 }
 
-#topic:target, #exp-studies:target, #skills:target, #projects:target { scroll-margin-top: 90px; }
+#topic:target, #exp-studies:target, #experiences:target, #skills:target, #projects:target { scroll-margin-top: 90px; }
 
 /* Sections avec effet Glass */
 section {
@@ -332,6 +332,70 @@ article.card#gold::before { content: "★"; position: absolute; top: 10px; right
 }
 .content h3 { font-size: 1rem; margin: 0 0 5px; color: var(--main); }
 .content p { font-size: 0.8rem; color: #555; margin: 0; }
+
+/* --- 6bis. CONTACT ---*/
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Espace entre la photo et le texte */
+    padding: 20px;
+}
+
+.contact-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Image ronde */
+    object-fit: cover;
+    border: 4px solid var(--second); /* Bordure blanche */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.contact-photo img:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+
+.contact-details h2 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.contact-details p {
+    margin: 0 0 20px 0;
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--second);
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--main);
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    background-color: var(--accent);
+    color: white;
+    box-shadow: 0 10px 20px rgba(93, 173, 226, 0.4);
+}
 
 /* --- 7. FOOTER --- */
 footer {
@@ -570,15 +634,19 @@ footer a:hover { color: white; }
     main { margin: 70px 15px 30px; }
     section { padding: 25px 20px; }
     .scroll-texts { font-size: 28px; min-width: 200px; }
-
-    /* Adaptation de la bulle skills sur mobile */
     .skill-card:hover .content.glass {
         width: 260px;
         z-index: 100;
-        /* Positionne la bulle plus sûrement sur petit écran */
         transform: translate(-50%, 60px) scale(1);
     }
-
     h1 { font-size: 1.5rem; }
-    h2 { font-size: 1.3rem; }
+
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .social-links {
+        justify-content: center;
+    }
 }

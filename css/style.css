@@ -370,31 +370,61 @@ article.card#gold::before { content: "★"; position: absolute; top: 10px; right
     font-weight: 500;
 }
 
+.contact-details {
+    width: 550px;
+}
+
 .social-links {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .social-links a {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 50px;
+    justify-content: flex-start;
+    width: auto;
+    min-width: 50px;
+    max-width: 50px;
     height: 50px;
     background-color: var(--second);
-    border-radius: 50%;
+    border-radius: 50px;
     text-decoration: none;
     color: var(--main);
     font-size: 1.5rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+    transition: max-width 0.5s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.social-links a i {
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a .link-text {
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-right: 0;
+    transition: opacity 0.3s ease 0.1s, padding-right 0.3s ease;
 }
 
 .social-links a:hover {
-    transform: translateY(-5px);
+    max-width: 300px;
     background-color: var(--accent);
     color: white;
     box-shadow: 0 10px 20px rgba(93, 173, 226, 0.4);
+}
+
+.social-links a:hover .link-text {
+    opacity: 1;
+    padding-right: 20px;
 }
 
 /* --- 7. FOOTER --- */
@@ -645,6 +675,9 @@ footer a:hover { color: white; }
         flex-direction: column;
         text-align: center;
         gap: 20px;
+    }
+    .contact-details {
+        width: auto;
     }
     .social-links {
         justify-content: center;

@@ -148,10 +148,8 @@ header > a {
 
 /* --- 4. MAIN LAYOUT & SECTIONS (Glassmorphism) --- */
 main {
-    margin: 80px 20px 50px;
     max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 80px auto 50px;
 }
 
 #topic:target, #exp-studies:target, #experiences:target, #skills:target, #projects:target { scroll-margin-top: 90px; }

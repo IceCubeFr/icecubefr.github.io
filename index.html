@@ -30,7 +30,7 @@
 <div id="all" style="display: none">
 
     <header>
-        <a href="./index.html">Portfolio de Florian GAVOILLE</a>
+        <a href="#">Portfolio de Florian GAVOILLE</a>
     </header>
 
     <button id="backToTop" title="Retour en haut">
@@ -61,11 +61,11 @@
             </div>
             <div class="paragraph">
                 <p>
-                    Je suis étudiant en deuxième année de BUT Informatique et je suis diplômé du Baccalauréat général mention bien avec Mathématiques et Numérique Sciences Informatiques. <br><br>
-                    J'ai un niveau B2 en anglais que je ne cesse de perfectionner par le biais des cours, d'applications dédiées et de communications avec des anglais natifs sur différents jeux. <br><br>
-                    Grâce à mes différentes expériences, aux projets que j'ai effectués et à mes études, que je détaillerai ci-après, j'ai pu acquérir de nombreuses compétences, telles que la gestion communautaire, l'aide à la personne, le développement d'applications ou de modules complémentaires de jeu, mais encore mon expression orale comme écrite de manière professionnelle. <br><br>
-                    Mon objectif de vie serait de pouvoir allier compétences et passions en travaillant dans le développement d'applications utilisées dans les transports en commun (signaux, matériel de bord, information voyageur, pilotes automatiques...)<br><br>
-                    Pour finir, vous trouverez tout mon profil détaillé ci-dessous !<br>
+                    Je suis étudiant en deuxième année de BUT Informatique à l'IUT de Lille et je suis diplômé du Baccalauréat général mention bien avec Mathématiques et Numérique Sciences Informatiques. <br><br>
+                    À l'issue de ce BUT, j'aimerais me perfectionner dans le développement WEB BackEnd, notamment avec JEE, Javascript, PHP et bien d'autres, je serai capable de me former et de m'adapter aux différents environnements sur lesquels je serai amené à travailler.<br><br>
+                    J'aimerais également pouvoir allier compétences et passions en travaillant dans le développement d'applications utilisées dans les transports en commun (signaux, matériel de bord, information voyageur, pilotes automatiques...)<br><br>
+                    Grâce à mes différentes expériences, aux projets que j'ai effectués et à mes études, que je détaillerai par la suite, j'ai pu acquérir de nombreuses compétences, telles que la gestion communautaire, l'aide à la personne, le développement d'applications ou de modules complémentaires de jeu, mais encore mon expression orale comme écrite de manière professionnelle. <br><br>
+                    Parmi tous les projets que j'ai pu réaliser, seul ou en équipe, personnels comme universitaires, celui qui est, selon moi, un exemple de mes compétences est ElectionsSim. Ce simulateur d'élections a fait appel à mes compétences en Java, JavaFX et versioning que j'ai pu acquérir tout au long de ma première année de BUT. Via une interface graphique, nous avons la possibilité de lancer des élections, d'ajouter ou de retirer des voix, et de lancer des scénarios aléatoires remplaçant une partie des voix par des abstentions. L'objectif de ce projet était de montrer aux engagés du SNU l'impact de l'abstention sur les élections.<br><br>
                     <strong>- Florian GAVOILLE</strong>
                 </p>
             </div>
@@ -77,13 +77,13 @@
             </div>
             <div class="paragraph">
                 <ul>
-                    <li><b>Depuis Septembre 2024</b> - Etudiant en BUT Informatique, IUT de Lille, Université de Lille</li>
+                    <li><b>Depuis Septembre 2024</b> - Étudiant en BUT Informatique, IUT de Lille, Université de Lille</li>
                     <ul class="tags">
                         <li class="dev">Java</li>
                         <li class="dev">Web</li>
                         <li class="dev">Réseaux et système</li>
                         <li class="comm">Communication</li>
-                        <li class="ang">Anglais</li>
+                        <li class="ang">Anglais (niveau B2)</li>
                     </ul>
                     <li><b>Session 2024</b> - Baccalauréat général mention Bien, spécialités Mathématiques et NSI</li>
                     <ul class="tags">
@@ -145,7 +145,7 @@
                     </div>
                     <div class="content glass">
                         <h3>Développement Java</h3>
-                        <p>En cours d'apprentissage à l'université, je connais déjà les bases de ce langage.</p>
+                        <p>En cours d'apprentissage à l'université, j'ai déjà pu faire mes preuves via des projets de plus ou moins grande envergure</p>
                     </div>
                 </div>
 
@@ -155,7 +155,7 @@
                     </div>
                     <div class="content glass">
                         <h3>Développement Web</h3>
-                        <p>Connaissances solides en HTML et CSS (ce site en est la preuve), quelques bases du Javascript.</p>
+                        <p>Connaissances solides en JEE et gestion de bases de données avec Java, quelques bases en Javascript, bases solides en HTML CSS.</p>
                     </div>
                 </div>
 
@@ -402,84 +402,7 @@
     </footer>
 </div>
 
-<script>
-    /* --- 1. GESTION DU LOADER --- */
-    const MIN_TIME = 1500; // Le temps minimum du loader (en ms)
-    const start = Date.now();
-
-    function finishLoading() {
-        const elapsed = Date.now() - start;
-        const remaining = Math.max(0, MIN_TIME - elapsed);
-
-        setTimeout(() => {
-            const loader = document.getElementById("banter-loader");
-            const content = document.getElementById("all");
-
-            // Disparition en fondu
-            if(loader) loader.style.opacity = "0";
-
-            setTimeout(() => {
-                // Suppression totale et affichage du site
-                if(loader) loader.style.display = "none";
-                if(content) content.style.display = "block";
-
-                // On lance les animations d'apparition une fois le site visible
-                initScrollReveal();
-            }, 500); // Temps de la transition CSS (0.5s)
-        }, remaining);
-    }
-
-    // On déclenche la fin du chargement quand la page est prête
-    window.addEventListener("load", finishLoading);
-
-
-    /* --- 2. SCROLL REVEAL (Animation d'apparition) --- */
-    function initScrollReveal() {
-        const reveals = document.querySelectorAll(".reveal");
-
-        // Vérifie si le navigateur supporte l'observer (moderne)
-        if ('IntersectionObserver' in window) {
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                        // On arrête d'observer une fois l'élément affiché
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 }); // Se déclenche à 15% de visibilité
-
-            reveals.forEach(reveal => {
-                revealObserver.observe(reveal);
-            });
-        } else {
-            // Fallback pour vieux navigateurs : on affiche tout directement
-            reveals.forEach(reveal => reveal.classList.add("active"));
-        }
-    }
-
-
-    /* --- 3. BOUTON RETOUR EN HAUT --- */
-    const backToTopBtn = document.getElementById("backToTop");
-
-    if(backToTopBtn) {
-        window.addEventListener("scroll", () => {
-            // Affiche le bouton si on a scrollé de plus de 300px
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add("show");
-            } else {
-                backToTopBtn.classList.remove("show");
-            }
-        });
-
-        backToTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    }
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

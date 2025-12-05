@@ -74,3 +74,22 @@ if(backToTopBtn) {
         });
     });
 }
+
+
+/* --- 4. PROTECTION EMAIL (Obfuscation) --- */
+const mailLink = document.getElementById("mail-link");
+
+if(mailLink) {
+    // On sépare les parties de l'email pour éviter que les robots ne les lisent dans le code source
+    const user = "florian.gavoille.pro";
+    const domain = "gmail.com";
+    
+    // On reconstitue le lien au survol ou au clic pour l'utilisateur
+    mailLink.addEventListener("mouseover", () => {
+        mailLink.href = "mailto:" + user + "@" + domain;
+    });
+
+    mailLink.addEventListener("click", () => {
+        mailLink.href = "mailto:" + user + "@" + domain;
+    });
+}

@@ -32,11 +32,8 @@ body {
 header {
     position: fixed;
     top: 0;
-    height: 60px;
+    height: 70px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     /* Effet Verre */
     background: rgba(41, 41, 41, 0.85);
     backdrop-filter: blur(10px);
@@ -46,12 +43,129 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-header > a {
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo {
     color: var(--second);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
     letter-spacing: 0.5px;
+}
+
+/* Navigation Menu */
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-menu ul li a {
+    color: var(--second);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+/* Animation Hover (Underline) */
+.nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active-link, .nav-menu ul li a:focus {
+    color: var(--accent);
+}
+
+.nav-menu ul li a:hover::after,
+.nav-menu ul li a.active-link::after {
+    width: 100%;
+}
+
+/* Burger Menu (Hidden by default) */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--second);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 900px) {
+    .burger-menu {
+        display: flex;
+        z-index: 101;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%; /* Pleine largeur sur mobile */
+        height: 100vh;
+        background: rgba(41, 41, 41, 0.98);
+        backdrop-filter: blur(15px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease;
+        z-index: 100;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1.5rem;
+    }
+
+    /* Animation Burger to Cross */
+    .burger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
 /* --- 2. BOUTON RETOUR EN HAUT --- */
@@ -174,6 +288,10 @@ section {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:target {
+    margin-top: 10vh;
 }
 
 /* Animation Scroll Reveal */

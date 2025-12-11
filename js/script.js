@@ -20,6 +20,8 @@ function finishLoading() {
 
             // On lance les animations d'apparition une fois le site visible
             initScrollReveal();
+            // On lance l'observateur de sections pour le menu
+            initActiveSectionObserver();
         }, 500); // Temps de la transition CSS (0.5s)
     }, remaining);
 }
@@ -91,5 +93,59 @@ if(mailLink) {
 
     mailLink.addEventListener("click", () => {
         mailLink.href = "mailto:" + user + "@" + domain;
+    });
+}
+
+/* --- 5. BURGER MENU --- */
+const burgerMenu = document.querySelector(".burger-menu");
+const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll(".nav-menu ul li a");
+
+if(burgerMenu && navMenu) {
+    burgerMenu.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            burgerMenu.classList.remove("active");
+            navMenu.classList.remove("active");
+        });
+    });
+}
+
+/* --- 6. ACTIVE LINK ON SCROLL --- */
+function initActiveSectionObserver() {
+    const sections = document.querySelectorAll('section[id]');
+    
+    // Si aucune section n'est trouvée (ex: page mentions légales), on ne fait rien
+    if (sections.length === 0) return;
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3 // La section doit être visible à 30% pour être considérée active
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Retirer la classe active de tous les liens
+                navLinks.forEach(link => {
+                    link.classList.remove('active-link');
+                    // Cas spécial : si le href correspond à l'ID de la section
+                    // On gère le cas href="#topic" et href="index.html#topic"
+                    if (link.getAttribute('href').endsWith('#' + entry.target.id)) {
+                        link.classList.add('active-link');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 }

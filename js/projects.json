@@ -1,0 +1,177 @@
+[
+   {
+    "title": "REST API",
+    "imgUrl": "https://www.oracle.com/a/ocom/img/hp11-intl-java-logo.jpg",
+    "shortDesc": "Projet de développement d'un système d'API REST en Java (JEE) pour une déchetterie",
+    "tags": [
+      { "title": "JEE", "type": "dev" },
+      { "title": "Java", "type": "dev" },
+      { "title": "Tomcat", "type": "dev" },
+      { "title": "Rapports", "type": "comm" },
+      { "title": "BUT2", "type": "autre" }
+    ],
+    "desc": "Système API REST",
+    "descHTML": "La plateforme API REST a été développée en java en utilisant un serveur Tomcat pour gérer un système de déchetterie (type de déchets, point de collecte etc.) via des requêtes web (GET, POST, PUT, PATCH et DELETE). Ce sytème possède une base de données ainsi qu'un système de connexion par Token BASIC. Le projet, effectué en groupe de 2, est une application directe des cours de Web auxquels nous avons assisté pendant le semestre 4.",
+    "link": "https://github.com/IceCubeFr/sae-rest"
+  },
+   {
+    "title": "MergeConflict",
+    "imgUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flevel-1.fr%2FPrincipal%2Fwp-content%2Fuploads%2F2020%2F04%2FUntitled-1-ds1-1340x1340-1.png&f=1&nofb=1&ipt=c54f57e6d8429bdf5d76e9bcc227548d59f47d906d510a47ddd1849261d99d09",
+    "shortDesc": "Projet de développement d'un jeu de type \"Shoot them up\" en TypeScript",
+    "tags": [
+      { "title": "TypeScript", "type": "dev" },
+      { "title": "Socket.io", "type": "dev" },
+      { "title": "Gestion de Projets", "type": "gestion" },
+      { "title": "Git", "type": "gestion" },
+      { "title": "Rapports", "type": "comm" },
+      { "title": "BUT2", "type": "autre" }
+    ],
+    "desc": "Jeu en typescript complexe",
+    "descHTML": "Le projet, effectué en groupe de 3, a été important dans l'application de notre apprentissage en JavaScript et TypeScript tout au long du court semestre 4. Nous devions utiliser les MileStones, Issue Board et Issues de GitLab pour gérer notre projet le mieux possible. La note finale a été basée sur la qualité du projet ainsi que sur le respect de la méthode de gestion de projet imposée",
+    "link": "https://github.com/IceCubeFr/Merge-Conflict"
+  },
+  {
+    "title": "Labyrinthes",
+    "imgUrl": "./media/labyrinthes.png",
+    "shortDesc": "Projet de développement d'un jeu de Labyrinthes devant respecter un cahier des charges",
+    "tags": [
+      { "title": "Java", "type": "dev" },
+      { "title": "Qualité de dev", "type": "dev" },
+      { "title": "Développement efficace", "type": "dev" },
+      { "title": "Rapports", "type": "comm" },
+      { "title": "BUT2", "type": "autre" }
+    ],
+    "desc": "Jeu de labyrinthe complexe.",
+    "descHTML": "Le projet consiste en la création d'un jeu de labyrinthe avec génération procédurale et résolution automatique par différents algorithmes. L'accent a été mis sur la qualité du code, le respect des patrons de conception (Design Patterns) et l'efficacité des algorithmes de recherche de chemin.",
+    "link": "https://github.com/IceCubeFr/S3.02"
+  },
+  {
+    "title": "Intro. Agilité",
+    "imgUrl": "./media/ascii_city.png",
+    "shortDesc": "Jeu sur shell en équipe non choisie en utilisant la méthodologie Agile SCRUM",
+    "tags": [
+      { "title": "Java", "type": "dev" },
+      { "title": "Agile", "type": "gestion" },
+      { "title": "Travail d'équipe", "type": "autre" },
+      { "title": "BUT2", "type": "autre" }
+    ],
+    "desc": "Projet Agile SCRUM.",
+    "descHTML": "Développement d'un jeu en mode texte (ASCII City) en utilisant la méthodologie Agile SCRUM. Ce projet a permis de mettre en pratique la gestion de sprint, les daily meetings, et l'utilisation d'outils de gestion de projet en équipe.",
+    "link": "https://github.com/IceCubeFr/projet-agile-s3"
+  },
+  {
+    "title": "ElectionsSim",
+    "imgUrl": "./media/ElectionSim.png",
+    "shortDesc": "Appli JavaFX pour gérer les élections numériques du SNU (Projet volontaire).",
+    "tags": [
+      { "title": "Java", "type": "dev" },
+      { "title": "JavaFX", "type": "dev" },
+      { "title": "SNU 2025", "type": "gestion" },
+      { "title": "Personnel 2025", "type": "autre" }
+    ],
+    "desc": "Simulateur d'élections complet.",
+    "descHTML": "Ce simulateur d'élections a fait appel à mes compétences en Java, JavaFX et versioning que j'ai pu acquérir tout au long de ma première année de BUT. Via une interface graphique, nous avons la possibilité de lancer des élections, d'ajouter ou de retirer des voix, et de lancer des scénarios aléatoires remplaçant une partie des voix par des abstentions. L'objectif de ce projet était de montrer aux engagés du SNU l'impact de l'abstention sur les élections.",
+    "link": "https://github.com/IceCubeFr/ElectionsSim"
+  },
+  {
+    "title": "Services Réseaux",
+    "imgUrl": "./media/datacenter.png",
+    "shortDesc": "Mise en place d'un serveur et d'un système Gitea (similaire Github).",
+    "tags": [
+      { "title": "Serveur", "type": "dev" },
+      { "title": "Gitea", "type": "dev" },
+      { "title": "Markdown", "type": "dev" },
+      { "title": "Anglais", "type": "ang" },
+      { "title": "BUT1", "type": "autre" }
+    ],
+    "desc": "Installation de services réseaux.",
+    "descHTML": "Projet de mise en œuvre de services réseaux sous Linux. Installation et configuration d'un serveur Gitea pour la gestion de dépôts Git, ainsi que la rédaction de documentations techniques en Markdown. Une partie du projet a été réalisée en anglais.",
+    "link": "https://github.com/IceCubeFr/S2.03"
+  },
+  {
+    "title": "Jeux Olympiques",
+    "imgUrl": "./media/paris24.jpg",
+    "shortDesc": "Étude statistique SQL et rédaction de rapport sur une édition des JO.",
+    "tags": [
+      { "title": "SQL", "type": "dev" },
+      { "title": "Statistiques", "type": "comm" },
+      { "title": "Rapport", "type": "comm" },
+      { "title": "Travail équipe", "type": "autre" },
+      { "title": "BUT1", "type": "autre" }
+    ],
+    "desc": "Analyse de données SQL.",
+    "descHTML": "Analyse d'une base de données relationnelle contenant les résultats historiques des Jeux Olympiques. Utilisation de requêtes SQL complexes pour extraire des statistiques pertinentes et rédaction d'un rapport de synthèse détaillé sur les performances des athlètes et des nations.",
+    "link": "https://github.com/IceCubeFr/BDD-BUT1"
+  },
+  {
+    "title": "Échanges Inter.",
+    "imgUrl": "./media/echanges_internationaux.png",
+    "shortDesc": "Application JavaFX d'échanges de jeunes internationaux (Gestion Graphes & IHM).",
+    "tags": [
+      { "title": "Java", "type": "dev" },
+      { "title": "Java FX", "type": "dev" },
+      { "title": "Graphes", "type": "dev" },
+      { "title": "Travail équipe", "type": "autre" },
+      { "title": "BUT1", "type": "autre" }
+    ],
+    "desc": "Gestion d'échanges via graphes.",
+    "descHTML": "Développement d'une application JavaFX permettant de gérer des échanges de jeunes entre différents pays. Utilisation de la théorie des graphes pour optimiser les trajets et les affectations. L'interface utilisateur a été conçue pour être intuitive et fonctionnelle.",
+    "link": "https://github.com/IceCubeFr/s201-s202"
+  },
+  {
+    "title": "Intro BDD",
+    "imgUrl": "./media/garage.jpeg",
+    "shortDesc": "Création d'un SI pour un garage auto avec Access et étude de marché.",
+    "tags": [
+      { "title": "Access", "type": "dev" },
+      { "title": "Étude de marché", "type": "gestion" },
+      { "title": "BUT1", "type": "autre" }
+    ],
+    "desc": "Système d'information de garage.",
+    "descHTML": "Conception d'un système d'information complet pour un garage automobile en utilisant Microsoft Access. Le projet incluait également une étude de marché préliminaire pour justifier les choix technologiques et fonctionnels du système.",
+    "link": "https://github.com/IceCubeFr/BDD-BUT1"
+  },
+  {
+    "title": "Double Langue",
+    "imgUrl": "./media/doublelangue.png",
+    "shortDesc": "Projet de développement en iJava. Création d'un jeu ludo-pédagogique.",
+    "tags": [
+      { "title": "iJava", "type": "dev" },
+      { "title": "Gestion de projet", "type": "gestion" },
+      { "title": "Anglais", "type": "ang" },
+      { "title": "Travail d'équipe", "type": "autre" },
+      { "title": "BUT1", "type": "autre" }
+    ],
+    "desc": "Jeu pédagogique bilingue.",
+    "descHTML": "Création d'un jeu sérieux (serious game) bilingue français-anglais développé en iJava. Le jeu vise à faciliter l'apprentissage de la langue anglaise de manière ludique. Ce projet a nécessité une forte coordination au sein de l'équipe de développement.",
+    "link": "https://github.com/IceCubeFr/Double-Langue"
+  },
+  {
+    "title": "Ubisoft Location",
+    "imgUrl": "./media/ubiLocAccueil.png",
+    "shortDesc": "Site de location de véhicule vert ou de co-voiturage pour une entreprise du numérique.",
+    "tags": [
+      { "title": "Web statique", "type": "dev" },
+      { "title": "Gestion de projet", "type": "gestion" },
+      { "title": "Communication", "type": "comm" },
+      { "title": "BUT1", "type": "autre" }
+    ],
+    "desc": "Plateforme de mobilité durable.",
+    "descHTML": "Réalisation d'un site web statique pour une plateforme interne de location de véhicules électriques et de covoiturage au sein d'Ubisoft. Le projet a couvert toutes les phases de conception, du maquettage à la communication visuelle.",
+    "link": "./Ubisoft_Location/index.html"
+  },
+  {
+    "title": "NearbyShare",
+    "imgUrl": "media/nearbyshare.jpg",
+    "shortDesc": "Plugin C# pour le jeu NovaLife:Amboise. Projet autodidacte personnel.",
+    "tags": [
+      { "title": "C#", "type": "dev" },
+      { "title": "Autodidacte", "type": "gestion" },
+      { "title": "Plugin", "type": "autre" },
+      { "title": "Projet Personnel 2024", "type": "autre" }
+    ],
+    "desc": "Plugin de partage C#.",
+    "descHTML": "Développement autodidacte d'un plugin en C# pour le jeu NovaLife:Amboise. Ce plugin permet le partage de fichiers ou de données entre les joueurs à proximité, améliorant ainsi l'expérience multijoueur du serveur.",
+    "link": "https://github.com/IceCubeFr/NearbyShare"
+  }
+]

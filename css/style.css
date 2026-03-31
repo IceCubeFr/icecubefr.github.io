@@ -232,18 +232,14 @@ header {
     display: flex;
     align-items: center;
     mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
-    /*-webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);*/
 }
 
 .scroll-track {
     display: flex;
-    /* Important : la largeur s'adapte au contenu pour que les 2 séries tiennent */
     width: max-content;
-    /* Durée de 30s (ou ajuste selon ta préférence) */
     animation: scroll 15s linear infinite;
 }
 
-/* L'animation ne va que jusqu'à -50% (la fin de la première série) */
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -266,6 +262,10 @@ header {
 
 /* --- 4. MAIN LAYOUT & SECTIONS (Glassmorphism) --- */
 main {
+    margin: 0;
+}
+
+.main {
     max-width: 1400px;
     margin: 80px auto 50px;
 }
@@ -290,10 +290,6 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section:target {
-    margin-top: 10vh;
-}
-
 /* Animation Scroll Reveal */
 .reveal {
     opacity: 0;
@@ -305,7 +301,8 @@ section:target {
     transform: translateY(0);
 }
 
-section:hover {
+/* Effet global sur les sections (sauf Projets) */
+section:not(.projects):hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     background: rgba(255, 255, 255, 0.9);
@@ -336,7 +333,7 @@ ul.tags li.ang { color: var(--anglais); background-color: var(--anglaisbg); }
 ul.tags li.autre { color: var(--autre); background-color: var(--autrebg); }
 
 
-/* --- 4bis. STUDY ITEMS & LOGOS (Nouveau style avec bulle) --- */
+/* --- 4bis. STUDY ITEMS & LOGOS --- */
 .study-list {
     list-style: none;
     padding: 0;
@@ -350,7 +347,6 @@ ul.tags li.autre { color: var(--autre); background-color: var(--autrebg); }
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-/* Pas de bordure pour le dernier élément */
 .study-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
@@ -393,7 +389,6 @@ ul.tags li.autre { color: var(--autre); background-color: var(--autrebg); }
     color: var(--main);
 }
 
-/* Responsive pour les logos */
 @media screen and (max-width: 600px) {
     .study-item {
         flex-direction: column;
@@ -412,7 +407,6 @@ section.projects div.cards {
     gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
-div.cards a { text-decoration: none; color: inherit; }
 
 article.card {
     background: white;
@@ -436,15 +430,16 @@ article.card img {
     transition: transform 0.5s ease;
 }
 
-/* Ajustement pour images qui doivent s'aligner à gauche si nécessaire */
 article.card img.forceleft { object-position: left; }
-
 article.card:hover img { transform: scale(1.02); }
-
 article.card h3 { margin-top: 0; }
 article.card p { flex-grow: 1; margin-bottom: 20px; font-size: 0.95rem; }
 
-section.projects div.cards a:hover article.card { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+article.card.projContainer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
 
 article.card#gold { border: 2px solid var(--gold-project); position: relative; overflow: hidden; }
 article.card#gold::before { content: "★"; position: absolute; top: 10px; right: 10px; color: var(--gold-project); font-size: 20px; }
@@ -459,7 +454,6 @@ article.card#gold::before { content: "★"; position: absolute; top: 10px; right
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .skill-card {
@@ -487,17 +481,9 @@ article.card#gold::before { content: "★"; position: absolute; top: 10px; right
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#skills {
-    position: relative;
-    z-index: 50; /* Un chiffre élevé pour être sûr d'être au premier plan */
-}
+#skills { position: relative; z-index: 50; }
+#projects { position: relative; z-index: 1; }
 
-#projects {
-    position: relative;
-    z-index: 1; /* Plus bas que skills */
-}
-
-/* Bulle de texte en Glassmorphism */
 .content.glass {
     position: absolute;
     top: 50%; left: 50%;
@@ -511,14 +497,12 @@ article.card#gold::before { content: "★"; position: absolute; top: 10px; right
     z-index: 10;
     pointer-events: none;
     transition: 0.3s ease;
-
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* Interactions */
 .skill-card:hover .icon-box, .skill-card:active .icon-box {
     color: white;
     background: var(--clr);
@@ -535,52 +519,31 @@ article.card#gold::before { content: "★"; position: absolute; top: 10px; right
 .content p { font-size: 0.8rem; color: #555; margin: 0; }
 
 /* --- 6bis. CONTACT ---*/
-
 .contact-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px; /* Espace entre la photo et le texte */
+    gap: 50px;
     padding: 20px;
 }
 
 .contact-photo img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Image ronde */
+    border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--second); /* Bordure blanche */
+    border: 4px solid var(--second);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
 
-.contact-photo img:hover {
-    transform: scale(1.05) rotate(3deg);
-}
+.contact-photo img:hover { transform: scale(1.05) rotate(3deg); }
 
-.contact-details h2 {
-    margin: 0 0 10px 0;
-    font-size: 2rem;
-    color: var(--accent);
-}
+.contact-details h2 { margin: 0 0 10px 0; font-size: 2rem; color: var(--accent); }
+.contact-details p { margin: 0 0 20px 0; font-size: 1.1rem; color: #555; font-weight: 500; }
+.contact-details { width: 550px; }
 
-.contact-details p {
-    margin: 0 0 20px 0;
-    font-size: 1.1rem;
-    color: #555;
-    font-weight: 500;
-}
-
-.contact-details {
-    width: 550px;
-}
-
-.social-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
+.social-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-start; }
 
 .social-links a {
     display: flex;
@@ -600,12 +563,7 @@ article.card#gold::before { content: "★"; position: absolute; top: 10px; right
     overflow: hidden;
 }
 
-.social-links a i {
-    min-width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.social-links a i { min-width: 50px; display: flex; justify-content: center; align-items: center; }
 
 .social-links a .link-text {
     opacity: 0;
@@ -623,10 +581,7 @@ article.card#gold::before { content: "★"; position: absolute; top: 10px; right
     box-shadow: 0 10px 20px rgba(93, 173, 226, 0.4);
 }
 
-.social-links a:hover .link-text {
-    opacity: 1;
-    padding-right: 20px;
-}
+.social-links a:hover .link-text { opacity: 1; padding-right: 20px; }
 
 /* --- 7. FOOTER --- */
 footer {
@@ -643,8 +598,6 @@ footer a { color: var(--accent); text-decoration: none; transition: 0.3s; }
 footer a:hover { color: white; }
 
 /* --- 8. LOADER STYLE --- */
-
-/* From Uiverse.io by Nawsome */
 .banter-loader {
     display: flex;
     justify-content: center;
@@ -655,209 +608,51 @@ footer a:hover { color: white; }
     position: absolute;
 }
 
-.pl {
-    width: 6em;
-    height: 6em;
-}
+.pl { width: 6em; height: 6em; }
+.pl__ring { animation: ringA 2s linear infinite; }
+.pl__ring--a { stroke: #f42f25; }
+.pl__ring--b { animation-name: ringB; stroke: #f49725; }
+.pl__ring--c { animation-name: ringC; stroke: #255ff4; }
+.pl__ring--d { animation-name: ringD; stroke: #f42582; }
 
-.pl__ring {
-    animation: ringA 2s linear infinite;
-}
-
-.pl__ring--a {
-    stroke: #f42f25;
-}
-
-.pl__ring--b {
-    animation-name: ringB;
-    stroke: #f49725;
-}
-
-.pl__ring--c {
-    animation-name: ringC;
-    stroke: #255ff4;
-}
-
-.pl__ring--d {
-    animation-name: ringD;
-    stroke: #f42582;
-}
-
-/* Animations */
 @keyframes ringA {
-    from, 4% {
-        stroke-dasharray: 0 660;
-        stroke-width: 20;
-        stroke-dashoffset: -330;
-    }
-
-    12% {
-        stroke-dasharray: 60 600;
-        stroke-width: 30;
-        stroke-dashoffset: -335;
-    }
-
-    32% {
-        stroke-dasharray: 60 600;
-        stroke-width: 30;
-        stroke-dashoffset: -595;
-    }
-
-    40%, 54% {
-        stroke-dasharray: 0 660;
-        stroke-width: 20;
-        stroke-dashoffset: -660;
-    }
-
-    62% {
-        stroke-dasharray: 60 600;
-        stroke-width: 30;
-        stroke-dashoffset: -665;
-    }
-
-    82% {
-        stroke-dasharray: 60 600;
-        stroke-width: 30;
-        stroke-dashoffset: -925;
-    }
-
-    90%, to {
-        stroke-dasharray: 0 660;
-        stroke-width: 20;
-        stroke-dashoffset: -990;
-    }
+    from, 4% { stroke-dasharray: 0 660; stroke-width: 20; stroke-dashoffset: -330; }
+    12% { stroke-dasharray: 60 600; stroke-width: 30; stroke-dashoffset: -335; }
+    32% { stroke-dasharray: 60 600; stroke-width: 30; stroke-dashoffset: -595; }
+    40%, 54% { stroke-dasharray: 0 660; stroke-width: 20; stroke-dashoffset: -660; }
+    62% { stroke-dasharray: 60 600; stroke-width: 30; stroke-dashoffset: -665; }
+    82% { stroke-dasharray: 60 600; stroke-width: 30; stroke-dashoffset: -925; }
+    90%, to { stroke-dasharray: 0 660; stroke-width: 20; stroke-dashoffset: -990; }
 }
 
 @keyframes ringB {
-    from, 12% {
-        stroke-dasharray: 0 220;
-        stroke-width: 20;
-        stroke-dashoffset: -110;
-    }
-
-    20% {
-        stroke-dasharray: 20 200;
-        stroke-width: 30;
-        stroke-dashoffset: -115;
-    }
-
-    40% {
-        stroke-dasharray: 20 200;
-        stroke-width: 30;
-        stroke-dashoffset: -195;
-    }
-
-    48%, 62% {
-        stroke-dasharray: 0 220;
-        stroke-width: 20;
-        stroke-dashoffset: -220;
-    }
-
-    70% {
-        stroke-dasharray: 20 200;
-        stroke-width: 30;
-        stroke-dashoffset: -225;
-    }
-
-    90% {
-        stroke-dasharray: 20 200;
-        stroke-width: 30;
-        stroke-dashoffset: -305;
-    }
-
-    98%, to {
-        stroke-dasharray: 0 220;
-        stroke-width: 20;
-        stroke-dashoffset: -330;
-    }
+    from, 12% { stroke-dasharray: 0 220; stroke-width: 20; stroke-dashoffset: -110; }
+    20% { stroke-dasharray: 20 200; stroke-width: 30; stroke-dashoffset: -115; }
+    40% { stroke-dasharray: 20 200; stroke-width: 30; stroke-dashoffset: -195; }
+    48%, 62% { stroke-dasharray: 0 220; stroke-width: 20; stroke-dashoffset: -220; }
+    70% { stroke-dasharray: 20 200; stroke-width: 30; stroke-dashoffset: -225; }
+    90% { stroke-dasharray: 20 200; stroke-width: 30; stroke-dashoffset: -305; }
+    98%, to { stroke-dasharray: 0 220; stroke-width: 20; stroke-dashoffset: -330; }
 }
 
 @keyframes ringC {
-    from {
-        stroke-dasharray: 0 440;
-        stroke-width: 20;
-        stroke-dashoffset: 0;
-    }
-
-    8% {
-        stroke-dasharray: 40 400;
-        stroke-width: 30;
-        stroke-dashoffset: -5;
-    }
-
-    28% {
-        stroke-dasharray: 40 400;
-        stroke-width: 30;
-        stroke-dashoffset: -175;
-    }
-
-    36%, 58% {
-        stroke-dasharray: 0 440;
-        stroke-width: 20;
-        stroke-dashoffset: -220;
-    }
-
-    66% {
-        stroke-dasharray: 40 400;
-        stroke-width: 30;
-        stroke-dashoffset: -225;
-    }
-
-    86% {
-        stroke-dasharray: 40 400;
-        stroke-width: 30;
-        stroke-dashoffset: -395;
-    }
-
-    94%, to {
-        stroke-dasharray: 0 440;
-        stroke-width: 20;
-        stroke-dashoffset: -440;
-    }
+    from { stroke-dasharray: 0 440; stroke-width: 20; stroke-dashoffset: 0; }
+    8% { stroke-dasharray: 40 400; stroke-width: 30; stroke-dashoffset: -5; }
+    28% { stroke-dasharray: 40 400; stroke-width: 30; stroke-dashoffset: -175; }
+    36%, 58% { stroke-dasharray: 0 440; stroke-width: 20; stroke-dashoffset: -220; }
+    66% { stroke-dasharray: 40 400; stroke-width: 30; stroke-dashoffset: -225; }
+    86% { stroke-dasharray: 40 400; stroke-width: 30; stroke-dashoffset: -395; }
+    94%, to { stroke-dasharray: 0 440; stroke-width: 20; stroke-dashoffset: -440; }
 }
 
 @keyframes ringD {
-    from, 8% {
-        stroke-dasharray: 0 440;
-        stroke-width: 20;
-        stroke-dashoffset: 0;
-    }
-
-    16% {
-        stroke-dasharray: 40 400;
-        stroke-width: 30;
-        stroke-dashoffset: -5;
-    }
-
-    36% {
-        stroke-dasharray: 40 400;
-        stroke-width: 30;
-        stroke-dashoffset: -175;
-    }
-
-    44%, 50% {
-        stroke-dasharray: 0 440;
-        stroke-width: 20;
-        stroke-dashoffset: -220;
-    }
-
-    58% {
-        stroke-dasharray: 40 400;
-        stroke-width: 30;
-        stroke-dashoffset: -225;
-    }
-
-    78% {
-        stroke-dasharray: 40 400;
-        stroke-width: 30;
-        stroke-dashoffset: -395;
-    }
-
-    86%, to {
-        stroke-dasharray: 0 440;
-        stroke-width: 20;
-        stroke-dashoffset: -440;
-    }
+    from, 8% { stroke-dasharray: 0 440; stroke-width: 20; stroke-dashoffset: 0; }
+    16% { stroke-dasharray: 40 400; stroke-width: 30; stroke-dashoffset: -5; }
+    36% { stroke-dasharray: 40 400; stroke-width: 30; stroke-dashoffset: -175; }
+    44%, 50% { stroke-dasharray: 0 440; stroke-width: 20; stroke-dashoffset: -220; }
+    58% { stroke-dasharray: 40 400; stroke-width: 30; stroke-dashoffset: -225; }
+    78% { stroke-dasharray: 40 400; stroke-width: 30; stroke-dashoffset: -395; }
+    86%, to { stroke-dasharray: 0 440; stroke-width: 20; stroke-dashoffset: -440; }
 }
 
 /* --- 9. RESPONSIVE MOBILE --- */
@@ -865,22 +660,139 @@ footer a:hover { color: white; }
     main { margin: 70px 15px 30px; }
     section { padding: 25px 20px; }
     .scroll-texts { font-size: 28px; min-width: 200px; }
-    .skill-card:hover .content.glass {
-        width: 260px;
-        z-index: 100;
-        transform: translate(-50%, 60px) scale(1);
-    }
+    .skill-card:hover .content.glass { width: 260px; z-index: 100; transform: translate(-50%, 60px) scale(1); }
     h1 { font-size: 1.5rem; }
+    .contact-content { flex-direction: column; text-align: center; gap: 20px; }
+    .contact-details { width: auto; }
+    .social-links { justify-content: center; }
+}
 
-    .contact-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    .contact-details {
-        width: auto;
-    }
-    .social-links {
-        justify-content: center;
-    }
+.hidden { display: none; }
+
+.old, .mentionsLegales {
+    max-width: 1400px;
+    margin: 100px auto 0; /* On retire la marge du bas pour gérer l'espace avec min-height */
+    padding: 0 40px 50px; /* On ajoute du padding en bas pour l'esthétique */
+    min-height: calc(100vh - 130px); /* 100vh - hauteur header (70px) - hauteur footer (~60px) */
+}
+
+.old section, .mentionsLegales section {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.main-back {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.main-back:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+/* --- 10. POPUP STYLE --- */
+.popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2000; }
+
+.popup-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-card {
+    position: relative;
+    width: 80%; height: 80%;
+    background: rgba(41, 41, 41, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) rgba(255, 255, 255, 0.1);
+}
+
+.popup-card::-webkit-scrollbar { width: 8px; }
+.popup-card::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); border-radius: 0 20px 20px 0; }
+.popup-card::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+.popup-image-container {
+    width: 100%; height: 50%;
+    min-height: 300px;
+    position: relative;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-image-container img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    object-position: top;
+    display: block;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.popup-content { padding: 40px; color: white; display: flex; flex-direction: column; gap: 20px; }
+.popup-content h2 { margin: 0; font-size: 2.5rem; color: var(--accent); }
+.popup-content h3 { margin: 0; font-size: 1.2rem; font-style: italic; color: #ccc; font-weight: 400; }
+.popup-desc { line-height: 1.8; font-size: 1.1rem; color: #eee; text-align: justify; }
+
+.popup-actions { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+
+.popup-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    width: fit-content;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.close-popup-btn, .main-back { background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); }
+.close-popup-btn:hover, .main-back:hover { background-color: rgba(255, 255, 255, 0.2) !important; }
+.popup-link:hover { background-color: #3498db; transform: scale(1.05); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+@media screen and (max-width: 900px) {
+    .popup-card { width: 95%; height: 90%; }
+    .popup-content { padding: 25px; }
+    .popup-content h2 { font-size: 1.8rem; }
 }

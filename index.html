@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/script.ts" defer></script>
 </head>
 <body>
 
@@ -27,7 +28,7 @@
     </svg>
 </div>
 
-<div id="all" style="display: none">
+<div id="all" class="hidden">
 
     <header>
         <div class="header-container">
@@ -53,423 +54,428 @@
     <button id="backToTop" title="Retour en haut">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
-
-    <div class="image">
-        <div class="contact-photo photo-top">
-            <img src="./media/portait.jpg" alt="Florian Gavoille">
-        </div>
-        <div class="scroll-container">
-            <div class="scroll-track">
-                <div class="scroll-texts">Je développe</div>
-                <div class="scroll-texts">J'apprends</div>
-                <div class="scroll-texts">Je crée</div>
-                <div class="scroll-texts">J'innove</div>
-
-                <div class="scroll-texts">Je développe</div>
-                <div class="scroll-texts">J'apprends</div>
-                <div class="scroll-texts">Je crée</div>
-                <div class="scroll-texts">J'innove</div>
-            </div>
-        </div>
-        <a href="#topic"><p><img src="media/arrow_scroll.png" class="scroll" alt="scroll"></p></a>
-    </div>
-
+    
     <main>
-        <section class="topic reveal" id="topic">
-            <div class="title">
-                <h1>À propos de moi</h1>
+        <div class="image">
+            <div class="contact-photo photo-top">
+                <img src="./media/portait.jpg" alt="Florian Gavoille">
             </div>
-            <div class="paragraph">
-                <p>
-                    Je suis étudiant en deuxième année de BUT Informatique à l'IUT de Lille et je suis diplômé du Baccalauréat général mention bien avec Mathématiques et Numérique Sciences Informatiques. <br><br>
-                    À l'issue de ce BUT, j'aimerais pouvoir allier compétences et passions en travaillant dans le développement d'applications utilisées dans les transports en commun (signaux, matériel de bord, information voyageur, pilotes automatiques...)<br><br>
-                    Grâce à mes différentes expériences, aux projets que j'ai effectués et à mes études, que je détaillerai par la suite, j'ai pu acquérir de nombreuses compétences, telles que la gestion communautaire, l'aide à la personne, le développement d'applications ou de modules complémentaires de jeu, mais encore mon expression orale comme écrite de manière professionnelle. <br><br>
-                    Parmi tous les projets que j'ai pu réaliser, seul ou en équipe, personnels comme universitaires, celui qui est, selon moi, un exemple de mes compétences est ElectionsSim. Ce simulateur d'élections a fait appel à mes compétences en Java, JavaFX et versioning que j'ai pu acquérir tout au long de ma première année de BUT. Via une interface graphique, nous avons la possibilité de lancer des élections, d'ajouter ou de retirer des voix, et de lancer des scénarios aléatoires remplaçant une partie des voix par des abstentions. L'objectif de ce projet était de montrer aux engagés du SNU l'impact de l'abstention sur les élections.<br><br>
-                    <strong>- Florian GAVOILLE</strong>
-                </p>
-            </div>
-        </section>
+            <div class="scroll-container">
+                <div class="scroll-track">
+                    <div class="scroll-texts">Je développe</div>
+                    <div class="scroll-texts">J'apprends</div>
+                    <div class="scroll-texts">Je crée</div>
+                    <div class="scroll-texts">J'innove</div>
 
-        <section class="exp-studies reveal" id="exp-studies">
-            <div class="title">
-                <h1>Etudes</h1>
+                    <div class="scroll-texts">Je développe</div>
+                    <div class="scroll-texts">J'apprends</div>
+                    <div class="scroll-texts">Je crée</div>
+                    <div class="scroll-texts">J'innove</div>
+                </div>
             </div>
-            <div class="paragraph">
-                <ul class="study-list">
+            <a href="#topic"><p><img src="media/arrow_scroll.png" class="scroll" alt="scroll"></p></a>
+        </div>
+        <div class="main">
+            <section class="topic reveal" id="topic">
+                <div class="title">
+                    <h1>À propos de moi</h1>
+                </div>
+                <div class="paragraph">
+                    <p>
+                        Je suis étudiant en deuxième année de BUT Informatique à l'IUT de Lille et je suis diplômé du Baccalauréat général mention bien avec Mathématiques et Numérique Sciences Informatiques. <br><br>
+                        À l'issue de ce BUT, j'aimerais pouvoir allier compétences et passions en travaillant dans le développement d'applications utilisées dans les transports en commun (signaux, matériel de bord, information voyageur, pilotes automatiques...)<br><br>
+                        Grâce à mes différentes expériences, aux projets que j'ai effectués et à mes études, que je détaillerai par la suite, j'ai pu acquérir de nombreuses compétences, telles que la gestion communautaire, l'aide à la personne, le développement d'applications ou de modules complémentaires de jeu, mais encore mon expression orale comme écrite de manière professionnelle. <br><br>
+                        Parmi tous les projets que j'ai pu réaliser, seul ou en équipe, personnels comme universitaires, celui qui est, selon moi, un exemple de mes compétences est ElectionsSim. Ce simulateur d'élections a fait appel à mes compétences en Java, JavaFX et versioning que j'ai pu acquérir tout au long de ma première année de BUT. Via une interface graphique, nous avons la possibilité de lancer des élections, d'ajouter ou de retirer des voix, et de lancer des scénarios aléatoires remplaçant une partie des voix par des abstentions. L'objectif de ce projet était de montrer aux engagés du SNU l'impact de l'abstention sur les élections.<br><br>
+                        <strong>- Florian GAVOILLE</strong>
+                    </p>
+                </div>
+            </section>
 
-                    <!-- 1. BUT Informatique -->
-                    <li class="study-item">
-                        <div class="study-logo">
-                            <img src="./media/iut-univ.png" alt="Logo Université">
+            <section class="exp-studies reveal" id="exp-studies">
+                <div class="title">
+                    <h1>Etudes</h1>
+                </div>
+                <div class="paragraph">
+                    <ul class="study-list">
+
+                        <!-- 1. BUT Informatique -->
+                        <li class="study-item">
+                            <div class="study-logo">
+                                <img src="./media/iut-univ.png" alt="Logo Université">
+                            </div>
+                            <div class="study-content">
+                                <span class="study-date"><b>Depuis Septembre 2024</b> - Étudiant en BUT Informatique, IUT de Lille, Université de Lille</span>
+                                <ul class="tags">
+                                    <li class="dev">Java</li>
+                                    <li class="dev">Web</li>
+                                    <li class="dev">Réseaux et système</li>
+                                    <li class="comm">Communication</li>
+                                    <li class="ang">Anglais (niveau B2)</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- 2. Baccalauréat -->
+                        <li class="study-item">
+                            <div class="study-logo">
+                                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F5227%2F5227551.png&f=1&nofb=1&ipt=72832c34c0dc23ae337c510d062074cfaf7250ebfbc70f9d70dac1afadfb9953" alt="Logo Diplôme">
+                            </div>
+                            <div class="study-content">
+                                <span class="study-date"><b>Session 2024</b> - Baccalauréat général, spécialités Mathématiques et NSI</span>
+                                <ul class="tags">
+                                    <li class="autre">Diplôme</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- 3. Lycée -->
+                        <li class="study-item">
+                            <div class="study-logo">
+                                <img src="https://lgt-marguerite-de-flandre-gondecourt.59.ac-lille.fr/wp-content/uploads/sites/111/2019/09/cropped-LogoMDF.png" alt="Logo Lycée">
+                            </div>
+                            <div class="study-content">
+                                <span class="study-date"><b>2021 / 2024</b> - Lycée public Marguerite de Flandre, 59266, Gondecourt</span>
+                                <ul class="tags">
+                                    <li class="dev">Python</li>
+                                    <li class="ang">Anglais</li>
+                                    <li class="ang">Espagnol</li>
+                                    <li class="autre">Mathématiques</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <section class="experiences reveal" id="experiences">
+                <div class="title">
+                    <h1>Experiences</h1>
+                </div>
+                <div class="paragraph">
+                    <ul>
+
+                        <li><b>Depuis juillet 2025</b> - Rédacteur pour l'association Mobilille</li>
+                        <ul class="tags">
+                            <li class="comm">Editorial</li>
+                            <li class="comm">Rédaction</li>
+                            <li class="autre">Engagement</li>
+                        </ul>
+                        <li><b>Juillet 2025</b> - Tuteur de maisonnée pour le SNU. J'ai eu à ma charge 12 jeunes de 15-17 ans pendant 15 jours.</li>
+                        <ul class="tags">
+                            <li class="gestion">Gestion de jeunes</li>
+                            <li class="autre">Prise de responsabilités</li>
+                            <li class="autre">Mise en place d'activités</li>
+                            <li class="autre">Engagement</li>
+                        </ul>
+                        <li><b>Février 2024 / Août 2024</b> - Membre bénévole de l'équipe support d'un jeu vidéo nommé NovaLife:Amboise</li>
+                        <ul class="tags">
+                            <li class="dev">Résolution de problèmes techniques</li>
+                            <li class="gestion">Gestion communautaire</li>
+                        </ul>
+                        <li><b>Novembre 2023 / Septembre 2025</b> - Administrateur bénévole d'un serveur communautaire rassemblant plus de 1300 membres</li>
+                        <ul class="tags">
+                            <li class="gestion">Gestion communautaire</li>
+                        </ul>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="skills reveal" id="skills">
+                <div class="title">
+                    <h1>Compétences</h1>
+                </div>
+                <div class="paragraph">
+
+                    <div class="skill-card" style="--clr: #f89820;">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-java"></i>
                         </div>
-                        <div class="study-content">
-                            <span class="study-date"><b>Depuis Septembre 2024</b> - Étudiant en BUT Informatique, IUT de Lille, Université de Lille</span>
+                        <div class="content glass">
+                            <h3>Développement Java</h3>
+                            <p>En cours d'apprentissage à l'université, j'ai déjà pu faire mes preuves via des projets de plus ou moins grande envergure</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" style="--clr: #e34c26;">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="content glass">
+                            <h3>Développement Web</h3>
+                            <p>Connaissances solides en JEE et gestion de bases de données avec Java, quelques bases en Javascript, bases solides en HTML CSS.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" style="--clr: #306998;">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <div class="content glass">
+                            <h3>Développement Python</h3>
+                            <p>J'ai déjà pu réaliser quelques projets au lycée dans ce langage que je maîtrise.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" style="--clr: #f1502f;">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-git-alt"></i>
+                        </div>
+                        <div class="content glass">
+                            <h3>Gestion Git</h3>
+                            <p>Utilisation régulière en cours des commandes de base et de la bonne gestion d'un dépôt Git.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" style="--clr: #0079bf;">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <div class="content glass">
+                            <h3>Gestion de projet</h3>
+                            <p>Bonnes connaissances par le biais des cours universitaires et mes expériences associatives.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" style="--clr: #28a745;">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <div class="content glass">
+                            <h3>Travail en équipe</h3>
+                            <p>Facilités d'intégration au sein d'une équipe dans le cadre d'un projet.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" style="--clr: #E12AFB;">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <div class="content glass">
+                            <h3>Anglais</h3>
+                            <p>Bases solides en anglais, niveau B2 validé en terminale, apprentissage et entraînement fréquents</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" style="--clr: #FDC745;">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="content glass">
+                            <h3>Autonomie</h3>
+                            <p>Capacité à travailler en totale autonomie sur des projets plus ou moins importants</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="popup hidden">
+
+            </section>
+
+            <section class="projects" id="projects">
+                <div class="title">
+                    <h1>Mes projets universitaires et personnels</h1>
+                </div>
+                <div class="cards">
+
+                    <a href="https://github.com/IceCubeFr/S3.02" target="_blank">
+                        <article class="card">
+                            <img src="./media/labyrinthes.png" alt="Capture d'écran d'un labyrinthe généré sur le jeu">
+                            <h3>Labyrinthes</h3>
+                            <p>Projet de développement d'un jeu de Labyrinthes devant respecter un cahier des charges</p>
                             <ul class="tags">
                                 <li class="dev">Java</li>
-                                <li class="dev">Web</li>
-                                <li class="dev">Réseaux et système</li>
-                                <li class="comm">Communication</li>
-                                <li class="ang">Anglais (niveau B2)</li>
+                                <li class="dev">Qualité de dev</li>
+                                <li class="dev">Développement efficace</li>
+                                <li class="comm">Rapports</li>
+                                <li class="autre">BUT2</li>
                             </ul>
-                        </div>
-                    </li>
+                        </article>
+                    </a>
 
-                    <!-- 2. Baccalauréat -->
-                    <li class="study-item">
-                        <div class="study-logo">
-                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F5227%2F5227551.png&f=1&nofb=1&ipt=72832c34c0dc23ae337c510d062074cfaf7250ebfbc70f9d70dac1afadfb9953" alt="Logo Diplôme">
-                        </div>
-                        <div class="study-content">
-                            <span class="study-date"><b>Session 2024</b> - Baccalauréat général, spécialités Mathématiques et NSI</span>
+                    <a href="https://github.com/IceCubeFr/projet-agile-s3" target="_blank">
+                        <article class="card">
+                            <img src="./media/ascii_city.png" alt="Capture d'écran de l'accueil du jeu">
+                            <h3>Intro. Agilité</h3>
+                            <p>Jeu sur shell en équipe non choisie en utilisant la méthodologie Agile SCRUM</p>
                             <ul class="tags">
-                                <li class="autre">Diplôme</li>
+                                <li class="dev">Java</li>
+                                <li class="gestion">Agile</li>
+                                <li class="autre">Travail d'équipe</li>
+                                <li class="autre">BUT2</li>
                             </ul>
-                        </div>
-                    </li>
+                        </article>
+                    </a>
 
-                    <!-- 3. Lycée -->
-                    <li class="study-item">
-                        <div class="study-logo">
-                            <img src="https://lgt-marguerite-de-flandre-gondecourt.59.ac-lille.fr/wp-content/uploads/sites/111/2019/09/cropped-LogoMDF.png" alt="Logo Lycée">
-                        </div>
-                        <div class="study-content">
-                            <span class="study-date"><b>2021 / 2024</b> - Lycée public Marguerite de Flandre, 59266, Gondecourt</span>
+                    <a href="https://github.com/IceCubeFr/ElectionsSim" target="_blank">
+                        <article class="card" id="gold">
+                            <img src="./media/ElectionSim.png" alt="ElectionsSim" class="forceleft">
+                            <h3>ElectionsSim</h3>
+                            <p>Appli JavaFX pour gérer les élections numériques du SNU (Projet volontaire).</p>
                             <ul class="tags">
-                                <li class="dev">Python</li>
+                                <li class="dev">Java</li>
+                                <li class="dev">JavaFX</li>
+                                <li class="gestion">SNU 2025</li>
+                                <li class="autre">Personnel 2025</li>
+                            </ul>
+                        </article>
+                    </a>
+
+                    <a href="https://github.com/IceCubeFr/S2.03" target="_blank">
+                        <article class="card">
+                            <img src="./media/datacenter.png" alt="Services réseaux">
+                            <h3>Services Réseaux</h3>
+                            <p>Mise en place d'un serveur et d'un système Gitea (similaire Github).</p>
+                            <ul class="tags">
+                                <li class="dev">Serveur</li>
+                                <li class="dev">Gitea</li>
+                                <li class="dev">Markdown</li>
                                 <li class="ang">Anglais</li>
-                                <li class="ang">Espagnol</li>
-                                <li class="autre">Mathématiques</li>
+                                <li class="autre">BUT1</li>
                             </ul>
+                        </article>
+                    </a>
+
+                    <a href="https://github.com/IceCubeFr/BDD-BUT1" target="_blank">
+                        <article class="card">
+                            <img src="./media/paris24.jpg" alt="JO Paris 2024">
+                            <h3>Jeux Olympiques</h3>
+                            <p>Étude statistique SQL et rédaction de rapport sur une édition des JO.</p>
+                            <ul class="tags">
+                                <li class="dev">SQL</li>
+                                <li class="comm">Statistiques</li>
+                                <li class="comm">Rapport</li>
+                                <li class="autre">Travail équipe</li>
+                                <li class="autre">BUT1</li>
+                            </ul>
+                        </article>
+                    </a>
+
+                    <a href="https://github.com/IceCubeFr/s201-s202" target="_blank">
+                        <article class="card">
+                            <img src="./media/echanges_internationaux.png" alt="Échanges internationaux" class="forceleft">
+                            <h3>Échanges Inter.</h3>
+                            <p>Application JavaFX d'échanges de jeunes internationaux (Gestion Graphes & IHM).</p>
+                            <ul class="tags">
+                                <li class="dev">Java</li>
+                                <li class="dev">Java FX</li>
+                                <li class="dev">Graphes</li>
+                                <li class="autre">Travail équipe</li>
+                                <li class="autre">BUT1</li>
+                            </ul>
+                        </article>
+                    </a>
+
+                    <a href="https://github.com/IceCubeFr/BDD-BUT1" target="_blank">
+                        <article class="card">
+                            <img src="./media/garage.jpeg" alt="Garage Auto">
+                            <h3>Intro BDD</h3>
+                            <p>Création d'un SI pour un garage auto avec Access et étude de marché.</p>
+                            <ul class="tags">
+                                <li class="dev">Access</li>
+                                <li class="gestion">Étude de marché</li>
+                                <li class="autre">BUT1</li>
+                            </ul>
+                        </article>
+                    </a>
+
+                    <a href="https://github.com/IceCubeFr/Double-Langue" target="_blank">
+                        <article class="card">
+                            <img src="./media/doublelangue.png" alt="Double Langue">
+                            <h3>Double Langue</h3>
+                            <p>Projet de développement en iJava. Création d'un jeu ludo-pédagogique.</p>
+                            <ul class="tags">
+                                <li class="dev">iJava</li>
+                                <li class="gestion">Gestion de projet</li>
+                                <li class="ang">Anglais</li>
+                                <li class="autre">Travail d'équipe</li>
+                                <li class="autre">BUT1</li>
+                            </ul>
+                        </article>
+                    </a>
+
+                    <a href="./Ubisoft_Location/index.html" target="_blank">
+                        <article class="card">
+                            <img src="./media/ubiLocAccueil.png" alt="Ubisoft Location">
+                            <h3>Ubisoft Location</h3>
+                            <p>Site de location de véhicule vert ou de co-voiturage pour une entreprise du numérique.</p>
+                            <ul class="tags">
+                                <li class="dev">Web statique</li>
+                                <li class="gestion">Gestion de projet</li>
+                                <li class="comm">Communication</li>
+                                <li class="autre">BUT1</li>
+                            </ul>
+                        </article>
+                    </a>
+
+                    <a href="https://github.com/IceCubeFr/NearbyShare" target="_blank">
+                        <article class="card">
+                            <img src="media/nearbyshare.jpg" alt="NearbyShare">
+                            <h3>NearbyShare</h3>
+                            <p>Plugin C# pour le jeu NovaLife:Amboise. Projet autodidacte personnel.</p>
+                            <ul class="tags">
+                                <li class="dev">C#</li>
+                                <li class="gestion">Autodidacte</li>
+                                <li class="autre">Plugin</li>
+                                <li class="autre">Projet Personnel 2024</li>
+                            </ul>
+                        </article>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="contact reveal" id="contact">
+                <div class="title">
+                    <h1>Me contacter</h1>
+                </div>
+                <div class="contact-content">
+
+                    <div class="contact-photo">
+                        <img src="./media/portait.jpg" alt="Florian Gavoille">
+                    </div>
+
+                    <div class="contact-details">
+                        <h2>Florian GAVOILLE</h2>
+                        <p>Étudiant en BUT Informatique</p>
+
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/florian-gavoille-063b21268/" target="_blank" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span class="link-text">LinkedIn</span>
+                            </a>
+
+                            <a href="https://github.com/IceCubeFr" target="_blank" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                                <span class="link-text">GitHub</span>
+                            </a>
+
+                            <a href="#" id="mail-link" title="M'envoyer un mail">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="link-text">Mail</span>
+                            </a>
+
+                            <a href="./media/CV.pdf" download="CV_Florian_Gavoille.pdf" title="Télécharger mon CV">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span class="link-text">Mon CV</span>
+                            </a>
                         </div>
-                    </li>
-
-                </ul>
-            </div>
-        </section>
-
-        <section class="experiences reveal" id="experiences">
-            <div class="title">
-                <h1>Experiences</h1>
-            </div>
-            <div class="paragraph">
-                <ul>
-
-                    <li><b>Depuis juillet 2025</b> - Rédacteur pour l'association Mobilille</li>
-                    <ul class="tags">
-                        <li class="comm">Editorial</li>
-                        <li class="comm">Rédaction</li>
-                        <li class="autre">Engagement</li>
-                    </ul>
-                    <li><b>Juillet 2025</b> - Tuteur de maisonnée pour le SNU. J'ai eu à ma charge 12 jeunes de 15-17 ans pendant 15 jours.</li>
-                    <ul class="tags">
-                        <li class="gestion">Gestion de jeunes</li>
-                        <li class="autre">Prise de responsabilités</li>
-                        <li class="autre">Mise en place d'activités</li>
-                        <li class="autre">Engagement</li>
-                    </ul>
-                    <li><b>Février 2024 / Août 2024</b> - Membre bénévole de l'équipe support d'un jeu vidéo nommé NovaLife:Amboise</li>
-                    <ul class="tags">
-                        <li class="dev">Résolution de problèmes techniques</li>
-                        <li class="gestion">Gestion communautaire</li>
-                    </ul>
-                    <li><b>Novembre 2023 / Septembre 2025</b> - Administrateur bénévole d'un serveur communautaire rassemblant plus de 1300 membres</li>
-                    <ul class="tags">
-                        <li class="gestion">Gestion communautaire</li>
-                    </ul>
-                </ul>
-            </div>
-        </section>
-
-        <section class="skills reveal" id="skills">
-            <div class="title">
-                <h1>Compétences</h1>
-            </div>
-            <div class="paragraph">
-
-                <div class="skill-card" style="--clr: #f89820;">
-                    <div class="icon-box">
-                        <i class="fa-brands fa-java"></i>
-                    </div>
-                    <div class="content glass">
-                        <h3>Développement Java</h3>
-                        <p>En cours d'apprentissage à l'université, j'ai déjà pu faire mes preuves via des projets de plus ou moins grande envergure</p>
                     </div>
                 </div>
+            </section>
 
-                <div class="skill-card" style="--clr: #e34c26;">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <div class="content glass">
-                        <h3>Développement Web</h3>
-                        <p>Connaissances solides en JEE et gestion de bases de données avec Java, quelques bases en Javascript, bases solides en HTML CSS.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" style="--clr: #306998;">
-                    <div class="icon-box">
-                        <i class="fa-brands fa-python"></i>
-                    </div>
-                    <div class="content glass">
-                        <h3>Développement Python</h3>
-                        <p>J'ai déjà pu réaliser quelques projets au lycée dans ce langage que je maîtrise.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" style="--clr: #f1502f;">
-                    <div class="icon-box">
-                        <i class="fa-brands fa-git-alt"></i>
-                    </div>
-                    <div class="content glass">
-                        <h3>Gestion Git</h3>
-                        <p>Utilisation régulière en cours des commandes de base et de la bonne gestion d'un dépôt Git.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" style="--clr: #0079bf;">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-list-check"></i>
-                    </div>
-                    <div class="content glass">
-                        <h3>Gestion de projet</h3>
-                        <p>Bonnes connaissances par le biais des cours universitaires et mes expériences associatives.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" style="--clr: #28a745;">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-people-group"></i>
-                    </div>
-                    <div class="content glass">
-                        <h3>Travail en équipe</h3>
-                        <p>Facilités d'intégration au sein d'une équipe dans le cadre d'un projet.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" style="--clr: #E12AFB;">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-language"></i>
-                    </div>
-                    <div class="content glass">
-                        <h3>Anglais</h3>
-                        <p>Bases solides en anglais, niveau B2 validé en terminale, apprentissage et entraînement fréquents</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" style="--clr: #FDC745;">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    <div class="content glass">
-                        <h3>Autonomie</h3>
-                        <p>Capacité à travailler en totale autonomie sur des projets plus ou moins importants</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="projects reveal" id="projects">
-            <div class="title">
-                <h1>Mes projets universitaires et personnels</h1>
-            </div>
-            <div class="cards">
-
-                <a href="https://github.com/IceCubeFr/S3.02" target="_blank">
-                    <article class="card">
-                        <img src="./media/labyrinthes.png" alt="Capture d'écran d'un labyrinthe généré sur le jeu">
-                        <h3>Labyrinthes</h3>
-                        <p>Projet de développement d'un jeu de Labyrinthes devant respecter un cahier des charges</p>
-                        <ul class="tags">
-                            <li class="dev">Java</li>
-                            <li class="dev">Qualité de dev</li>
-                            <li class="dev">Développement efficace</li>
-                            <li class="comm">Rapports</li>
-                            <li class="autre">BUT2</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="https://github.com/IceCubeFr/projet-agile-s3" target="_blank">
-                    <article class="card">
-                        <img src="./media/ascii_city.png" alt="Capture d'écran de l'accueil du jeu">
-                        <h3>Intro. Agilité</h3>
-                        <p>Jeu sur shell en équipe non choisie en utilisant la méthodologie Agile SCRUM</p>
-                        <ul class="tags">
-                            <li class="dev">Java</li>
-                            <li class="gestion">Agile</li>
-                            <li class="autre">Travail d'équipe</li>
-                            <li class="autre">BUT2</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="https://github.com/IceCubeFr/ElectionsSim" target="_blank">
-                    <article class="card" id="gold">
-                        <img src="./media/ElectionSim.png" alt="ElectionsSim" class="forceleft">
-                        <h3>ElectionsSim</h3>
-                        <p>Appli JavaFX pour gérer les élections numériques du SNU (Projet volontaire).</p>
-                        <ul class="tags">
-                            <li class="dev">Java</li>
-                            <li class="dev">JavaFX</li>
-                            <li class="gestion">SNU 2025</li>
-                            <li class="autre">Personnel 2025</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="https://github.com/IceCubeFr/S2.03" target="_blank">
-                    <article class="card">
-                        <img src="./media/datacenter.png" alt="Services réseaux">
-                        <h3>Services Réseaux</h3>
-                        <p>Mise en place d'un serveur et d'un système Gitea (similaire Github).</p>
-                        <ul class="tags">
-                            <li class="dev">Serveur</li>
-                            <li class="dev">Gitea</li>
-                            <li class="dev">Markdown</li>
-                            <li class="ang">Anglais</li>
-                            <li class="autre">BUT1</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="https://github.com/IceCubeFr/BDD-BUT1" target="_blank">
-                    <article class="card">
-                        <img src="./media/paris24.jpg" alt="JO Paris 2024">
-                        <h3>Jeux Olympiques</h3>
-                        <p>Étude statistique SQL et rédaction de rapport sur une édition des JO.</p>
-                        <ul class="tags">
-                            <li class="dev">SQL</li>
-                            <li class="comm">Statistiques</li>
-                            <li class="comm">Rapport</li>
-                            <li class="autre">Travail équipe</li>
-                            <li class="autre">BUT1</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="https://github.com/IceCubeFr/s201-s202" target="_blank">
-                    <article class="card">
-                        <img src="./media/echanges_internationaux.png" alt="Échanges internationaux" class="forceleft">
-                        <h3>Échanges Inter.</h3>
-                        <p>Application JavaFX d'échanges de jeunes internationaux (Gestion Graphes & IHM).</p>
-                        <ul class="tags">
-                            <li class="dev">Java</li>
-                            <li class="dev">Java FX</li>
-                            <li class="dev">Graphes</li>
-                            <li class="autre">Travail équipe</li>
-                            <li class="autre">BUT1</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="https://github.com/IceCubeFr/BDD-BUT1" target="_blank">
-                    <article class="card">
-                        <img src="./media/garage.jpeg" alt="Garage Auto">
-                        <h3>Intro BDD</h3>
-                        <p>Création d'un SI pour un garage auto avec Access et étude de marché.</p>
-                        <ul class="tags">
-                            <li class="dev">Access</li>
-                            <li class="gestion">Étude de marché</li>
-                            <li class="autre">BUT1</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="https://github.com/IceCubeFr/Double-Langue" target="_blank">
-                    <article class="card">
-                        <img src="./media/doublelangue.png" alt="Double Langue">
-                        <h3>Double Langue</h3>
-                        <p>Projet de développement en iJava. Création d'un jeu ludo-pédagogique.</p>
-                        <ul class="tags">
-                            <li class="dev">iJava</li>
-                            <li class="gestion">Gestion de projet</li>
-                            <li class="ang">Anglais</li>
-                            <li class="autre">Travail d'équipe</li>
-                            <li class="autre">BUT1</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="./Ubisoft_Location/index.html" target="_blank">
-                    <article class="card">
-                        <img src="./media/ubiLocAccueil.png" alt="Ubisoft Location">
-                        <h3>Ubisoft Location</h3>
-                        <p>Site de location de véhicule vert ou de co-voiturage pour une entreprise du numérique.</p>
-                        <ul class="tags">
-                            <li class="dev">Web statique</li>
-                            <li class="gestion">Gestion de projet</li>
-                            <li class="comm">Communication</li>
-                            <li class="autre">BUT1</li>
-                        </ul>
-                    </article>
-                </a>
-
-                <a href="https://github.com/IceCubeFr/NearbyShare" target="_blank">
-                    <article class="card">
-                        <img src="media/nearbyshare.jpg" alt="NearbyShare">
-                        <h3>NearbyShare</h3>
-                        <p>Plugin C# pour le jeu NovaLife:Amboise. Projet autodidacte personnel.</p>
-                        <ul class="tags">
-                            <li class="dev">C#</li>
-                            <li class="gestion">Autodidacte</li>
-                            <li class="autre">Plugin</li>
-                            <li class="autre">Projet Personnel 2024</li>
-                        </ul>
-                    </article>
-                </a>
-
-            </div>
-        </section>
-
-        <section class="contact reveal" id="contact">
-            <div class="title">
-                <h1>Me contacter</h1>
-            </div>
-            <div class="contact-content">
-
-                <div class="contact-photo">
-                    <img src="./media/portait.jpg" alt="Florian Gavoille">
-                </div>
-
-                <div class="contact-details">
-                    <h2>Florian GAVOILLE</h2>
-                    <p>Étudiant en BUT Informatique</p>
-
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/florian-gavoille-063b21268/" target="_blank" title="LinkedIn">
-                            <i class="fa-brands fa-linkedin"></i>
-                            <span class="link-text">LinkedIn</span>
-                        </a>
-
-                        <a href="https://github.com/IceCubeFr" target="_blank" title="GitHub">
-                            <i class="fa-brands fa-github"></i>
-                            <span class="link-text">GitHub</span>
-                        </a>
-
-                        <a href="#" id="mail-link" title="M'envoyer un mail">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span class="link-text">Mail</span>
-                        </a>
-
-                        <a href="./media/CV.pdf" download="CV_Florian_Gavoille.pdf" title="Télécharger mon CV">
-                            <i class="fa-solid fa-file-pdf"></i>
-                            <span class="link-text">Mon CV</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <p class="note">Note: Le site est voué à être amélioré et complété dans le temps.</p>
+            <p class="note">Note: Le site est voué à être amélioré et complété dans le temps.</p>
+        </div>
     </main>
 
+    <div class="old hidden"></div>
+    <div class="mentionsLegales hidden"></div>
     <footer>
-        <p>Florian GAVOILLE - 2026 - <a href="mentions.html">Mentions légales</a> - <a href="old.html">Historique des versions</a></p>
-    </footer>
+    <p>Florian GAVOILLE - 2026 - <a href="mentions.html" class="mentionsLink">Mentions légales</a> - <a href="old.html" class="oldLink">Historique des versions</a></p>
+</footer>
 </div>
-
-<script src="js/script.js"></script>
 
 </body>
 </html>

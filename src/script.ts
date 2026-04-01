@@ -248,7 +248,7 @@ function openPopup(proj: Project) {
     });
 }
 
-fetch("./js/projects.json")
+fetch("./src/projects.json")
 .then(response => response.json())
 .then((projects: Project[]) => {
     allProjects = projects;

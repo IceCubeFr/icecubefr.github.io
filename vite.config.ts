@@ -5,4 +5,7 @@ export default defineConfig({
     port: 8000,
     strictPort: true,
   },
+  build: {
+    outDir: 'dist',
+  }
 });

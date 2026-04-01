@@ -1,3 +1,4 @@
+console.log("Launched!");
 /* --- 1. GESTION DU LOADER --- */
 const MIN_TIME = 1500; // Le temps minimum du loader (en ms)
 const start = Date.now();

@@ -1,4 +1,4 @@
-[
+const PROJECTS_DATA = [
    {
     "title": "REST API",
     "imgUrl": "https://www.oracle.com/a/ocom/img/hp11-intl-java-logo.jpg",
@@ -174,4 +174,4 @@
     "descHTML": "Développement autodidacte d'un plugin en C# pour le jeu NovaLife:Amboise. Ce plugin permet le partage de fichiers ou de données entre les joueurs à proximité, améliorant ainsi l'expérience multijoueur du serveur.",
     "link": "https://github.com/IceCubeFr/NearbyShare"
   }
-]
+];

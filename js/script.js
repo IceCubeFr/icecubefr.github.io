@@ -80,7 +80,7 @@ if(backToTopBtn) {
 
 
 /* --- 4. PROTECTION EMAIL (Obfuscation) --- */
-const mailLink: HTMLLinkElement = document.getElementById("mail-link") as HTMLLinkElement;
+const mailLink = document.getElementById("mail-link");
 
 if(mailLink) {
     // On sépare les parties de l'email pour éviter que les robots ne les lisent dans le code source
@@ -144,11 +144,11 @@ function initActiveSectionObserver() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // Retirer la classe active de tous les liens
-                navLinks.forEach((link: Element) => {
+                navLinks.forEach((link) => {
                     link.classList.remove('active-link');
                     // Cas spécial : si le href correspond à l'ID de la section
                     // On gère le cas href="#topic" et href="index.html#topic"
-                    if (link.getAttribute('href')!.endsWith('#' + entry.target.id)) {
+                    if (link.getAttribute('href').endsWith('#' + entry.target.id)) {
                         link.classList.add('active-link');
                     }
                 });
@@ -161,32 +161,18 @@ function initActiveSectionObserver() {
     });
 }
 
-/* --- 7. LOADING PROJECTS --- */
-let allProjects: Project[] = [];
+/* --- 7. PROJECTS DATA (Loaded from projects.js) --- */
+const allProjects = PROJECTS_DATA;
 
-interface Tags {
-    title: string;
-    type: string;
-}
-interface Project {
-    title: string;
-    imgUrl: string;
-    shortDesc: string;
-    tags: Tags[];
-    desc: string;
-    descHTML: string;
-    link: string;
-}
-
-function renderTags(tags: Tags[]) {
-    let html: string = "";
-    tags.forEach((tag: Tags) => {
-        html += `<li class="${tag.type}">${tag.title}</li>`
+function renderTags(tags) {
+    let html = "";
+    tags.forEach((tag) => {
+        html += '<li class="' + tag.type + '">' + tag.title + '</li>'
     });
     return html;
 }
 
-function renderProject(proj: Project, index: number) {
+function renderProject(proj, index) {
     return `
         <article class="card projContainer" data-index="${index}">
             <img src="${proj.imgUrl}" alt="Image du projet ${proj.title}">
@@ -199,8 +185,8 @@ function renderProject(proj: Project, index: number) {
 `
 }
 
-function openPopup(proj: Project) {
-    const popup = document.querySelector('.popup')!;
+function openPopup(proj) {
+    const popup = document.querySelector('.popup');
     popup.innerHTML = `
         <div class="popup-overlay">
             <div class="popup-card">
@@ -248,38 +234,31 @@ function openPopup(proj: Project) {
     });
 }
 
-fetch("./src/projects.json")
-.then(response => response.json())
-.then((projects: Project[]) => {
-    allProjects = projects;
-    const container = document.querySelector('.cards')!;
-    if (container) {
-        let html = "";
-        projects.forEach((proj: Project, index: number) => {
-            html += renderProject(proj, index);
-        })
-        container.innerHTML = html;
+// Render projects immediately from the inlined data
+const container = document.querySelector('.cards');
+if (container) {
+    let html = "";
+    allProjects.forEach((proj, index) => {
+        html += renderProject(proj, index);
+    })
+    container.innerHTML = html;
 
-        const projs = document.querySelectorAll('.projContainer')!;
-        projs.forEach(elt => {
-            elt.addEventListener('click', () => {
-                const index = parseInt(elt.getAttribute('data-index')!);
-                openPopup(allProjects[index]);
-            });
+    const projs = document.querySelectorAll('.projContainer');
+    projs.forEach(elt => {
+        elt.addEventListener('click', () => {
+            const index = parseInt(elt.getAttribute('data-index'));
+            openPopup(allProjects[index]);
         });
-    }
-})
-.catch(error => {
-    console.error("Erreur lors du chargement des projets:", error);
-});
+    });
+}
 
 /* --- 8. Mentions legales et anciennes versions --- */
-const mainSection = document.querySelector('main')!;
-const heroSection = document.querySelector('.image')!;
-const oldLink = document.querySelector('.oldLink')!;
-const mentionsLink = document.querySelector('.mentionsLink')!;
-const oldSection = document.querySelector('.old')!;
-const mentionsSection = document.querySelector('.mentionsLegales')!;
+const mainSection = document.querySelector('main');
+const heroSection = document.querySelector('.image');
+const oldLink = document.querySelector('.oldLink');
+const mentionsLink = document.querySelector('.mentionsLink');
+const oldSection = document.querySelector('.old');
+const mentionsSection = document.querySelector('.mentionsLegales');
 
 function hideMainContent() {
     mainSection.classList.add('hidden');
@@ -295,7 +274,7 @@ function showMainContent() {
     window.scrollTo(0, 0);
 }
 
-function setupBackButtons(container: Element) {
+function setupBackButtons(container) {
     const backBtns = container.querySelectorAll('.main-back');
     backBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -305,25 +284,17 @@ function setupBackButtons(container: Element) {
     });
 }
 
-fetch("./old.html")
-.then(response => response.text())
-.then(content => {
-    oldSection.innerHTML = `<div class="reveal active">${content}</div>`;
-    setupBackButtons(oldSection);
-});
-
-fetch("./mentions.html")
-.then(response => response.text())
-.then(content => {
-    mentionsSection.innerHTML = `<div class="reveal active">${content}</div>`;
-    setupBackButtons(mentionsSection);
-});
+// Setup back buttons for inlined content
+setupBackButtons(oldSection);
+setupBackButtons(mentionsSection);
 
 oldLink?.addEventListener('click', (event) => {
     event.preventDefault();
     hideMainContent();
     mentionsSection.classList.add('hidden');
     oldSection.classList.remove('hidden');
+    // Ensure reveals inside are active
+    oldSection.querySelectorAll('.reveal').forEach(r => r.classList.add('active'));
 });
 
 mentionsLink?.addEventListener('click', (event) => {
@@ -331,4 +302,6 @@ mentionsLink?.addEventListener('click', (event) => {
     hideMainContent();
     oldSection.classList.add('hidden');
     mentionsSection.classList.remove('hidden');
+    // Ensure reveals inside are active
+    mentionsSection.querySelectorAll('.reveal').forEach(r => r.classList.add('active'));
 });

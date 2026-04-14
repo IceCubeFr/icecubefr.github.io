@@ -671,9 +671,9 @@ footer a:hover { color: white; }
 
 .old, .mentionsLegales {
     max-width: 1400px;
-    margin: 100px auto 0; /* On retire la marge du bas pour gérer l'espace avec min-height */
-    padding: 0 40px 50px; /* On ajoute du padding en bas pour l'esthétique */
-    min-height: calc(100vh - 130px); /* 100vh - hauteur header (70px) - hauteur footer (~60px) */
+    margin: 100px auto 0;
+    padding: 0 40px 50px;
+    min-height: calc(100vh - 130px);
 }
 
 .old section, .mentionsLegales section {

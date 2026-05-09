@@ -308,7 +308,7 @@ section:not(.projects):hover {
     background: rgba(255, 255, 255, 0.9);
 }
 
-section .title {
+section .title, .separator {
     border-bottom: 3px solid var(--accent);
     width: 100%;
     margin-bottom: 30px;
@@ -402,6 +402,12 @@ ul.tags li.autre { color: var(--autre); background-color: var(--autrebg); }
 
 
 /* --- 5. PROJETS (GRID) --- */
+.legend, .legend .tags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 section.projects div.cards {
     display: grid;
     gap: 30px;
@@ -740,8 +746,7 @@ footer a:hover { color: white; }
 .popup-card::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
 
 .popup-image-container {
-    width: 100%; height: 50%;
-    min-height: 300px;
+    width: 100%; height: 80%;
     position: relative;
     flex-shrink: 0;
     background-color: rgba(0, 0, 0, 0.2);
@@ -752,7 +757,7 @@ footer a:hover { color: white; }
 
 .popup-image-container img {
     width: 100%; height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: top;
     display: block;
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);

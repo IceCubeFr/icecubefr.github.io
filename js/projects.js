@@ -1,5 +1,36 @@
 const PROJECTS_DATA = [
-   {
+  {
+    "title": "MyMovies",
+    "imgUrl": "https://raw.githubusercontent.com/IceCubeFr/IceCubeFr/refs/heads/main/pageAccueilVA.png",
+    "shortDesc": "Projet de validation des acquis de la formation \"Nextoo Academy\"",
+    "tags": [
+      { "title": "SpringBoot", "type": "dev" },
+      { "title": "JPA - Hibernate", "type": "dev" },
+      { "title": "Vue JS", "type": "dev" },
+      { "title": "Présentation client", "type": "comm" },
+      { "title": "Stage BUT2", "type": "autre" }
+    ],
+    "desc": "MyMovies",
+    "descHTML": "Dans le cadre de mon stage en 2ème année de BUT Informatique, j'ai suivi une formation interne à l'entreprise Nextoo : la Nextoo Academy. Tout au long de cette formation, j'ai été suivi par un parrain technique pour apprendre les techniques, technologies et bonnes pratiques en entreprise. J'y ai notamment appris l'utilisation de SpringBoot, du framework VueJS et le déploiement d'une application en production. Cette formation se concluait par une validation des acquis, un projet d'une semaine qui se faisait seul, sans l'aide technique de notre parrain et avec le minimum d'instructions de manière à nous amener à poser le plus de questions possibles. MyMovies est donc la conclusion de ces dix semaines de formation au sein de l'entreprise Nextoo et montre mes capacités en développement WEB avancé que j'ai pu développer.",
+    "link": "https://github.com/IceCubeFr/MyMovies"
+  },
+  {
+    "title": "Weather Sports",
+    "imgUrl": "https://raw.githubusercontent.com/IceCubeFr/IceCubeFr/refs/heads/main/pageAccueilWeather.png",
+    "shortDesc": "Application de gestion de licences sportives et de météo locale",
+    "tags": [
+      { "title": "SpringBoot", "type": "dev" },
+      { "title": "JPA - Hibernate", "type": "dev" },
+      { "title": "Vue JS", "type": "dev" },
+      { "title": "DevOps", "type": "dev" },
+      { "title": "Gestion de projets", "type": "gestion" },
+      { "title": "Stage BUT2", "type": "autre" }
+    ],
+    "desc": "Weather Sports",
+    "descHTML": "Dans le cadre de mon stage en 2ème année de BUT Informatique, j'ai suivi une formation interne à l'entreprise Nextoo : la Nextoo Academy. Tout au long de cette formation, j'ai été suivi par un parrain technique pour apprendre les techniques, technologies et bonnes pratiques en entreprise. J'y ai notamment appris l'utilisation de SpringBoot, du framework VueJS et le déploiement d'une application en production. Pour nous transmettre ce savoir, j'ai développé une application web, Weather Sports, que je venais compléter au fur et à mesure de mon avancée dans la formation. Au départ, l'application avait pour unique but de récupérer la météo à partir d'une ville donnée et la renvoyait sous la forme d'une API REST. Par la suite, j'ai implémenté une base de données que j'ai manipulé grâce à JPA et son implémentation Hibernate, puis j'ai ajouté une partie front-end pour finalement déployer l'application à l'aide de pipelines Gitlab CI. Le tout donne l'application que vous trouverez sur mon GitHub.",
+    "link": "https://github.com/IceCubeFr/Weather-Sports"
+  },
+  {
     "title": "REST API",
     "imgUrl": "https://www.oracle.com/a/ocom/img/hp11-intl-java-logo.jpg",
     "shortDesc": "Projet de développement d'un système d'API REST en Java (JEE) pour un centre de recyclage",
